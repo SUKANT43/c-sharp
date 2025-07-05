@@ -1,7 +1,11 @@
-﻿class Program
+﻿namespace MyApp
 {
-    public static void main(string[] args)
+    class Program
     {
-        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("hi hello hi");
+            Console.ReadLine();
+        }
     }
 }
