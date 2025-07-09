@@ -1,0 +1,4 @@
+for installing the files:
+dotnet new console -n name 
+for running: 
+dotnet run

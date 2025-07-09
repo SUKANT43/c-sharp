@@ -1,0 +1,8 @@
+public class InputAndOutput
+{
+    void print()
+    {
+        int a = 10;
+        Console.Write(a);
+    }
+}
