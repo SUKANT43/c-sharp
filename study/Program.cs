@@ -20,9 +20,13 @@ public class Program
         // user input demo
         // UserInput d = new UserInput();
         // d.print();
-
-        ArraysDemo e = new ArraysDemo();
-        e.print();
+        
+        // arrays demo
+        // ArraysDemo e = new ArraysDemo();
+        // e.print();
     
+        ExceptionHandlingDemo f = new ExceptionHandlingDemo();
+        f.print();
+
     }
 }
