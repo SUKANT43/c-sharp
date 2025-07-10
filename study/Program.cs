@@ -12,10 +12,13 @@ public class Program
         // StringDemo b = new StringDemo();
         // b.print();
 
-        NumbersDemo c = new NumbersDemo();
-        c.print();
-        
 
+        // numbers demo
+        // NumbersDemo c = new NumbersDemo();
+        // c.print();
 
+        UserInput d = new UserInput();
+        d.print();
+    
     }
 }
