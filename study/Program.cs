@@ -8,8 +8,12 @@ public class Program
         a.print();
         */
 
-        StringDemo b = new StringDemo();
-        b.print();
+        //  string demo
+        // StringDemo b = new StringDemo();
+        // b.print();
+
+        NumbersDemo c = new NumbersDemo();
+        c.print();
         
 
 
