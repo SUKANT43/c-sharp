@@ -17,8 +17,12 @@ public class Program
         // NumbersDemo c = new NumbersDemo();
         // c.print();
 
-        UserInput d = new UserInput();
-        d.print();
+        // user input demo
+        // UserInput d = new UserInput();
+        // d.print();
+
+        ArraysDemo e = new ArraysDemo();
+        e.print();
     
     }
 }
