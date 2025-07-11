@@ -3,10 +3,10 @@ public class Program
 {
     static void Main(string[] args)
     {
-       /* data types:
-        DataTypes a = new DataTypes();
-        a.print();
-        */
+        /* data types:
+         DataTypes a = new DataTypes();
+         a.print();
+         */
 
         //  string demo
         // StringDemo b = new StringDemo();
@@ -20,13 +20,16 @@ public class Program
         // user input demo
         // UserInput d = new UserInput();
         // d.print();
-        
+
         // arrays demo
         // ArraysDemo e = new ArraysDemo();
         // e.print();
-    
-        ExceptionHandlingDemo f = new ExceptionHandlingDemo();
-        f.print();
 
+        // exception handling demo
+        // ExceptionHandlingDemo f = new ExceptionHandlingDemo();
+        // f.print();
+
+        ClassAndObjectDemo sukant = new ClassAndObjectDemo("Sukant", "Intel i7", "NVIDIA RTX 3080", 16, 512);
+        sukant.pc();
     }
 }
