@@ -29,7 +29,18 @@ public class Program
         // ExceptionHandlingDemo f = new ExceptionHandlingDemo();
         // f.print();
 
-        ClassAndObjectDemo sukant = new ClassAndObjectDemo("Sukant", "Intel i7", "NVIDIA RTX 3080", 16, 512);
-        sukant.pc();
+        // class and object demo
+        // ClassAndObjectDemo sukant = new ClassAndObjectDemo("Sukant", "Intel i7", "NVIDIA RTX 3080", 16, 512);
+        // sukant.pc();
+
+        Chef demo = new Chef();
+        demo.MakeChicken();
+        demo.MakeSalad();
+        demo.MakeSpecialDish();
+        ItalianChef it = new ItalianChef();
+        it.MakeChicken();
+        it.MakeSalad();
+        it.MakeSpecialDish();
+
     }
 }
