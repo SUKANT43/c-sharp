@@ -24,7 +24,5 @@ public class Sub : Super
         base.print();
         base.sayHi("Hi from Sub via base");
         base.sayHello("Hello from Sub via base");
-
     }
-
 }
