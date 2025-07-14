@@ -48,9 +48,12 @@ public class Program
         // dog.MakeSound();
         // dog.sleep();
 
-        Interface goat = new Goat();
-        goat.MakeSound();
-        goat.sleep();
+        // Interface demo
+        // Interface goat = new Goat();
+        // goat.MakeSound();
+        // goat.sleep();
 
+        Super super = new Sub();
+        super.print();
     }
 }
