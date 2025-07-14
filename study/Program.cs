@@ -43,9 +43,14 @@ public class Program
         // it.MakeSalad();
         // it.MakeSpecialDish();
 
-        AbstractClass dog = new Dog();
-        dog.MakeSound();
-        dog.sleep();
+        //Abstract class demo
+        // AbstractClass dog = new Dog();
+        // dog.MakeSound();
+        // dog.sleep();
+
+        Interface goat = new Goat();
+        goat.MakeSound();
+        goat.sleep();
 
     }
 }
