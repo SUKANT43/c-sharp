@@ -43,5 +43,9 @@ public class Program
         // it.MakeSalad();
         // it.MakeSpecialDish();
 
+        AbstractClass dog = new Dog();
+        dog.MakeSound();
+        dog.sleep();
+
     }
 }
