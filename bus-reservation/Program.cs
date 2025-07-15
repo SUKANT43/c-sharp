@@ -20,7 +20,7 @@ public class Program
 
         int userOpt = 1;
 
-        hile (userOpt != -1)
+        while (userOpt != -1)
         {
             Console.WriteLine("\nEnter 1 to Book, 2 to View Bus Details, 3 to Exit:");
             userOpt = int.Parse(Console.ReadLine()!);
