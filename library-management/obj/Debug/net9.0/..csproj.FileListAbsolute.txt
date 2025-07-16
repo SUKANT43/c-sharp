@@ -1,0 +1,15 @@
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\bin\Debug\net9.0\..exe
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\bin\Debug\net9.0\..deps.json
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\bin\Debug\net9.0\..runtimeconfig.json
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\bin\Debug\net9.0\..dll
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\bin\Debug\net9.0\..pdb
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..AssemblyInfoInputs.cache
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..AssemblyInfo.cs
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..csproj.CoreCompileInputs.cache
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..sourcelink.json
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..dll
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\refint\..dll
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..pdb
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\..genruntimeconfig.cache
+C:\Users\OptiCheck\Desktop\c#\c-sharp\library-management\obj\Debug\net9.0\ref\..dll
