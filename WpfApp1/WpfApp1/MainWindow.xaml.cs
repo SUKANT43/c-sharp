@@ -23,6 +23,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            myButton.FontSize = 50;
         }
     }
 }
