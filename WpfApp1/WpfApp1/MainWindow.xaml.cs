@@ -20,10 +20,18 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        int count = 0;
+
         public MainWindow()
         {
             InitializeComponent();
-            myButton.FontSize = 50;
+
+            myText.Text = "hello from run time";
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
     }
 }
