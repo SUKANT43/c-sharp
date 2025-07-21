@@ -27,6 +27,8 @@ namespace WpfApp1
             InitializeComponent();
 
             myText.Text = "hello from run time";
+            myText.Foreground =Brushes.Red;
+            myText.Background = Brushes.Yellow;
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
