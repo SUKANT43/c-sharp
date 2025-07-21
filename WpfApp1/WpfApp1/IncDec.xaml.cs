@@ -20,7 +20,7 @@ namespace WpfApp1
 
         private void Decrement(object sender, RoutedEventArgs e)
         {
-            if (count < 0)
+            if (count < 1)
             {
                 CounterText.Text = "Number must be greater than or equal to zero";
                 return;

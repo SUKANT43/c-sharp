@@ -19,5 +19,6 @@
         <TextBlock x:Name="myText">Hello!</TextBlock>
         <TextBlock Name="run"></TextBlock>
         <local:IncDec/>
+        <local:ToDo/>
     </StackPanel>
 </Window>
