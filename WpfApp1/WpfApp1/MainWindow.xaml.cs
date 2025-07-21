@@ -29,6 +29,20 @@ namespace WpfApp1
             myText.Text = "hello from run time";
             myText.Foreground =Brushes.Red;
             myText.Background = Brushes.Yellow;
+
+            TextBlock run= new TextBlock();
+            run.Inlines.Add(new Run("Hello I am from Object")
+            {
+                Foreground = Brushes.White
+            });
+
+            run.Inlines.Add(new Run(" Hey I am from new Object but same class")
+            {
+                Foreground = Brushes.Yellow,
+                Background = Brushes.Red
+            });
+            MyStackPanel.Children.Add(run);
+
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
