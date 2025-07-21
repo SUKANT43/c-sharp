@@ -13,3 +13,6 @@ C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.C
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\IncDec.g.cs
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\IncDec.baml

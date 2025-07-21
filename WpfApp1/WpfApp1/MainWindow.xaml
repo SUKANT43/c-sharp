@@ -18,6 +18,6 @@
         </TextBlock>
         <TextBlock x:Name="myText">Hello!</TextBlock>
         <TextBlock Name="run"></TextBlock>
-
+        <local:IncDec/>
     </StackPanel>
 </Window>
