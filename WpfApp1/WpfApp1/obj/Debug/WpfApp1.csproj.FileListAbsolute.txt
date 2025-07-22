@@ -18,3 +18,5 @@ C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GeneratedInterna
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\IncDec.baml
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GuessNumber.g.cs
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GuessNumber.baml
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\ToDo.g.cs
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\ToDo.baml

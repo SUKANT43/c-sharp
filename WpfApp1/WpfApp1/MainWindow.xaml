@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="450" Width="800">
+        Title="Hello World Window">
     <StackPanel Name="MyStackPanel" >
       <!--  <Button x:Name="myButton" Height="40" Width="120" FontWeight="Bold" FontSize="20" Background="PaleVioletRed"  Content="Hello Guys" />
         <TextBlock FontSize="20">Hello <Bold>World!</Bold> And hello <Italic>You</Italic> 
@@ -27,6 +27,6 @@
         </Label>
                 <local:IncDec Loaded="IncDec_Loaded"/>-->
 
-        <local:GuessNumber/>
+        <local:ToDo/>
     </StackPanel>
 </Window>
