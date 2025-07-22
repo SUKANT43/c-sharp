@@ -18,7 +18,13 @@
         </TextBlock>
         <TextBlock x:Name="myText">Hello!</TextBlock>
         <TextBlock Name="run"></TextBlock>
+        <Label >
+            <StackPanel>
+                <StackPanel Background="Black" Width="60" Height="60"></StackPanel>
+                <AccessText FontSize="32" Text="Message"></AccessText>  
+                
+            </StackPanel>
+        </Label>
         <local:IncDec/>
-        <local:ToDo/>
     </StackPanel>
 </Window>
