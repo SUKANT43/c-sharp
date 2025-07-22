@@ -1,52 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 namespace WpfApp1
 {
-    /// <summary>
-    /// Interaction logic for ToDo.xaml
-    /// </summary>
     public partial class ToDo : UserControl
     {
         List<BluePrint> list = new List<BluePrint>();
+
         public ToDo()
         {
             InitializeComponent();
+            OutputValue.ItemsSource = list; // Bind list to ListBox
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (InputValue.Text == "")
-            {
+            if (string.IsNullOrWhiteSpace(InputValue.Text))
                 return;
-            }
-            else
-            {
-                list.Add(new BluePrint(InputValue.Text,false));
-                InputValue.Text = "";
-            }
+
+            list.Add(new BluePrint(InputValue.Text, false)); // Add new task
+            InputValue.Clear(); // Clear input
+            OutputValue.Items.Refresh(); // Refresh UI manually
         }
     }
 
     public class BluePrint
     {
-        string value;
-        bool done;
+        public string Value { get; set; }
+        public bool Done { get; set; }
 
         public BluePrint(string value, bool done)
         {
-            this.value = value;
-            this.done = done;
+            Value = value;
+            Done = done;
         }
     }
 }

@@ -38,12 +38,12 @@ namespace WpfApp1
             if (score >= 5)
             {
                 outputNumber.Text = "🎉 You Won!";
-                score = 0; 
+                score = 0;
             }
             else if (score <= -5)
             {
                 outputNumber.Text = "❌ You Lose. Try another Game";
-                score = 0; 
+                score = 0;
             }
             else
             {
