@@ -16,3 +16,5 @@ C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCo
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\IncDec.g.cs
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\IncDec.baml
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GuessNumber.g.cs
+C:\Users\OptiCheck\Desktop\c#\c-sharp\WpfApp1\WpfApp1\obj\Debug\GuessNumber.baml

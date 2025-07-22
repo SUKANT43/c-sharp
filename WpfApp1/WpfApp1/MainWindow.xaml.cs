@@ -50,7 +50,7 @@ namespace WpfApp1
             System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
 
-        private void IncDec_Loaded()
+        private void IncDec_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
