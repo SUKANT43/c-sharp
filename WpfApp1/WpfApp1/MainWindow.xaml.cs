@@ -26,33 +26,34 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            myText.Text = "hello from run time";
-            myText.Foreground =Brushes.Red;
-            myText.Background = Brushes.Yellow;
+            /* myText.Text = "hello from run time";
+             myText.Foreground =Brushes.Red;
+             myText.Background = Brushes.Yellow;
 
-            TextBlock run= new TextBlock();
-            run.Inlines.Add(new Run("Hello I am from Object")
-            {
-                Foreground = Brushes.White
-            });
+             TextBlock run= new TextBlock();
+             run.Inlines.Add(new Run("Hello I am from Object")
+             {
+                 Foreground = Brushes.White
+             });
 
-            run.Inlines.Add(new Run(" Hey I am from new Object but same class")
-            {
-                Foreground = Brushes.Yellow,
-                Background = Brushes.Red
-            });
-            MyStackPanel.Children.Add(run);
+             run.Inlines.Add(new Run(" Hey I am from new Object but same class")
+             {
+                 Foreground = Brushes.Yellow,
+                 Background = Brushes.Red
+             });
+             MyStackPanel.Children.Add(run);
 
-        }
+         }
 
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
-        {
-            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
-        }
+         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+         {
+             System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
+         }
 
-        private void IncDec_Loaded(object sender, RoutedEventArgs e)
-        {
+         private void IncDec_Loaded(object sender, RoutedEventArgs e)
+         {
 
+         }*/
         }
     }
 }

@@ -6,13 +6,24 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Height="450" Width="800">
-
-    <Grid Background="LightGray">
+                
+    <StackPanel Background="LightGray" Margin="0,0,-30,-90" >
         <TextBlock Text="Guess the Number!" 
                    FontSize="24" 
                    FontWeight="Bold" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Top" 
                    Margin="0,20,0,0"/>
-    </Grid>
+        <TextBlock Text="Rules: You need to score 5 points to win the game. Each correct prediction earns you 1 point, while each wrong prediction deducts 1 point. If your score reaches -5, you lose the game. You need to enter number from 1 to 5 only." 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   Margin="0,20,0,0"
+                   TextWrapping="Wrap"/>
+        <TextBox Width="100" Margin="40" Height="100" BorderThickness="2" BorderBrush="Black" x:Name="inputNumber"></TextBox>
+        <Button Content="Predict" Width="80" Height="50" Background="Black" FontWeight="Bold" Foreground="White" FontSize='20' Click="Button_Predict"/>
+        <TextBlock HorizontalAlignment="Center" Margin="10" FontWeight="Bold" FontSize="30">Your Score</TextBlock>
+        <TextBlock HorizontalAlignment="Center" FontSize="30"  FontWeight="Bold" Text="0" x:Name="outputNumber"></TextBlock>
+    </StackPanel>
 </UserControl>

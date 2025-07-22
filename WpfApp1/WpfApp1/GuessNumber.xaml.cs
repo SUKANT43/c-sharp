@@ -1,27 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WpfApp1
 {
-    /// <summary>
-    /// Interaction logic for GuessNumber.xaml
-    /// </summary>
     public partial class GuessNumber : UserControl
     {
+        int score = 0;
+        Random random = new Random();
+
         public GuessNumber()
         {
             InitializeComponent();
+        }
+
+        private void Button_Predict(object sender, RoutedEventArgs e)
+        {
+            string input = inputNumber.Text.Trim();
+
+            if (!int.TryParse(input, out int userNumber) || userNumber < 1 || userNumber > 5)
+            {
+                outputNumber.Text = "Enter a number between 1 and 5!";
+                return;
+            }
+
+            int randomNumber = random.Next(1, 6);
+
+            if (userNumber == randomNumber)
+            {
+                score++;
+            }
+            else
+            {
+                score--;
+            }
+
+            if (score >= 5)
+            {
+                outputNumber.Text = "🎉 You Won!";
+                score = 0; 
+            }
+            else if (score <= -5)
+            {
+                outputNumber.Text = "❌ You Lose. Try another Game";
+                score = 0; 
+            }
+            else
+            {
+                outputNumber.Text = $"Your Score: {score} (Random: {randomNumber})";
+            }
         }
     }
 }
