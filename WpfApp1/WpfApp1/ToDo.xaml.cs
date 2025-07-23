@@ -11,7 +11,7 @@ namespace WpfApp1
         public ToDo()
         {
             InitializeComponent();
-            OutputValue.ItemsSource = list; // Bind list to ListBox
+            OutputValue.ItemsSource = list; 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -19,14 +19,17 @@ namespace WpfApp1
             if (string.IsNullOrWhiteSpace(InputValue.Text))
                 return;
 
-            list.Add(new BluePrint(InputValue.Text, false)); // Add new task
-            InputValue.Clear(); // Clear input
-            OutputValue.Items.Refresh(); // Refresh UI manually
+            list.Add(new BluePrint(InputValue.Text, false)); 
+            InputValue.Clear(); 
+            OutputValue.Items.Refresh(); 
         }
     }
 
     public class BluePrint
     {
+
+
+
         public string Value { get; set; }
         public bool Done { get; set; }
 
