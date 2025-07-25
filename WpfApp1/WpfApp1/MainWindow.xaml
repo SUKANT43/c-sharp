@@ -26,7 +26,7 @@
              </StackPanel>
         </Label>
                 <local:IncDec Loaded="IncDec_Loaded"/>-->
-
+        <RepeatButton>submit</RepeatButton>
         <local:ToDo/>
     </StackPanel>
 </Window>

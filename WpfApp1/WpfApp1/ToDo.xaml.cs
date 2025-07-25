@@ -27,9 +27,6 @@ namespace WpfApp1
 
     public class BluePrint
     {
-
-
-
         public string Value { get; set; }
         public bool Done { get; set; }
 
