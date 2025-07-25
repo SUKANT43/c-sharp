@@ -1,18 +1,15 @@
 public class BookSchema
 {
-    int Id;
-    string Title;
-    string stringAuthor;
-    int Stock;
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public int Stock { get; set; }
 
     public BookSchema(int id, string title, string author, int stock)
     {
         Id = id;
         Title = title;
-        stringAuthor = author;
+        Author = author;
         Stock = stock;
     }
-    
-     
-
 }
