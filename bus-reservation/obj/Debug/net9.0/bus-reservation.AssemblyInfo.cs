@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bus-reservation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0802c40f5590125ad6fb651e6c87f70a64dc1cac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0a311face1b769311114966a23f5a888074939d")]
 [assembly: System.Reflection.AssemblyProductAttribute("bus-reservation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bus-reservation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
