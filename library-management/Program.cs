@@ -1,36 +1,43 @@
-﻿public class Program
+﻿using System;
+using System.Collections.Generic;
+
+public class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to the Library Management System Application! please choose a Option: ");
-        Console.WriteLine("1. Login as a Admin");
-        Console.WriteLine("2. Login as a User");
-        Console.WriteLine("3. Exit");
+        int choice = 0;
 
-        int Choice = int.Parse(Console.ReadLine());
-
-        while (Choice != 3)
+        while (choice != 3)
         {
-            while (Choice == 1)
+            Console.WriteLine("\nWelcome to the Library Management System Application!");
+            Console.WriteLine("Please choose an option:");
+            Console.WriteLine("1. Login as Admin");
+            Console.WriteLine("2. View Books (User)");
+            Console.WriteLine("3. Exit");
+            Console.Write("Enter your choice: ");
+
+            if (!int.TryParse(Console.ReadLine(), out choice))
             {
-                Console.WriteLine("You have chosen to login as an Admin.");
-                Console.Write("Enter Admin Username: ");
-                string adminName = Console.ReadLine();
-                Console.Write("Enter Admin Password: ");
-                string adminPass = Console.ReadLine();
-                if (Admin.Authenticate(adminName, adminPass))
-                {
-                    Console.WriteLine("Admin login successful!");
-                }
-                else
-                {
-                    Console.WriteLine("Admin login failed. Please try again.");
-                    Console.Write("Try again 1 for Admin , 2 for User, 3 to Exit: ");
-                    Choice = int.Parse(Console.ReadLine());
-                }
+                Console.WriteLine("Invalid input. Please enter 1, 2, or 3.");
+                continue;
+            }
+
+            if (choice == 1)
+            {
+                AdminLogin();
+            }
+            else if (choice == 2)
+            {
+                Console.WriteLine("Welcome User! Here are the available books:");
+            }
+            else if (choice == 3)
+            {
+                Console.WriteLine("Thank you for using the Library Management System. Goodbye!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice! Try again.");
             }
         }
-
-        Console.WriteLine("Thank you for using the Library Management System Application. Goodbye!");     
     }
 }
