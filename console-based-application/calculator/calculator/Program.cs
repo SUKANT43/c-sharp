@@ -29,28 +29,32 @@ namespace calculator
             Console.Write("Enter Number b:");
             int b = int.Parse(Console.ReadLine());
 
-            if (choice == 1)
+            switch (choice)
             {
-                Solution(Calculator.Add(a, b));
-            }
-            else if (choice == 2)
-            {
-                Solution(Calculator.Subract(a, b));
-            }
-            else if (choice == 3)
-            {
-                Solution(Calculator.Multiply(a, b));
-            }
-            else if (choice == 4)
-            {
-                if (b == 0)
-                {
-                    Console.WriteLine("Cannot divide by zero.");
-                    Console.ReadLine();
-                    return;
-                }
+                case 1:
+                    Solution(Calculator.Add(a, b));
+                    break;
+
+                case 2:
+                    Solution(Calculator.Subract(a, b));
+                    break;
+
+                case 3:
+
+                    Solution(Calculator.Multiply(a, b));
+                    break;
+
+                case 4:
+                    if (b == 0)
+                    {
+                        Console.WriteLine("Cannot divide by zero.");
+                        Console.ReadLine();
+                        return;
+                    }
                     Solution(Calculator.Division(a, b));
+                    break;
             }
+            
             Console.ReadLine();
         }
 
