@@ -62,7 +62,7 @@ namespace calculator
                 }
                 Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division,  5 to Modulus and -1 to exit: ");
                 choice = int.Parse(Console.ReadLine());
-                if (choice == -1)
+                if (choice == -1|| choice<-1  || choice==0 || choice>5)
                 {
                     return;
                 }
