@@ -54,7 +54,6 @@ namespace calculator
                     Solution(Calculator.Division(a, b));
                     break;
             }
-            
             Console.ReadLine();
         }
 
