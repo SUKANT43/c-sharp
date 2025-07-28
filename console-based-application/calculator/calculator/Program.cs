@@ -9,13 +9,14 @@ namespace calculator
     class Program
     {
 
-        public static void Solution(int result)
+        public static int Solution(int result)
         {
             Console.WriteLine("Your Answer: "+ result);
+            return result;
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division");
+            Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division and -1 to exit: ");
             Console.WriteLine("Enter Your Choice");
             int choice = int.Parse(Console.ReadLine());
             if (choice > 4 || choice < 1)
@@ -28,31 +29,41 @@ namespace calculator
             int a = int.Parse(Console.ReadLine());
             Console.Write("Enter Number b:");
             int b = int.Parse(Console.ReadLine());
-
-            switch (choice)
+            while(choice!=-1)
             {
-                case 1:
-                    Solution(Calculator.Add(a, b));
-                    break;
+                switch (choice)
+                {
+                    case 1:
+                        a=Solution(Calculator.Add(a, b));
+                        break;
 
-                case 2:
-                    Solution(Calculator.Subract(a, b));
-                    break;
+                    case 2:
+                        a=Solution(Calculator.Subract(a, b));
+                        break;
 
-                case 3:
+                    case 3:
 
-                    Solution(Calculator.Multiply(a, b));
-                    break;
+                        a=Solution(Calculator.Multiply(a, b));
+                        break;
 
-                case 4:
-                    if (b == 0)
-                    {
-                        Console.WriteLine("Cannot divide by zero.");
-                        Console.ReadLine();
-                        return;
-                    }
-                    Solution(Calculator.Division(a, b));
-                    break;
+                    case 4:
+                        if (b == 0)
+                        {
+                            Console.WriteLine("Cannot divide by zero.");
+                            Console.ReadLine();
+                            return;
+                        }
+                        a=Solution(Calculator.Division(a, b));
+                        break;
+                }
+                Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division and -1 to exit: ");
+                choice = int.Parse(Console.ReadLine());
+                if (choice == -1)
+                {
+                    return;
+                }
+                Console.WriteLine("Enter Number to operate with previous answer: ");
+                b = int.Parse(Console.ReadLine());
             }
             Console.ReadLine();
         }
