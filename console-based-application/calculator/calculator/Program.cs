@@ -16,12 +16,12 @@ namespace calculator
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division and -1 to exit: ");
+            Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division , 5 to Modulus and -1 to exit: ");
             Console.WriteLine("Enter Your Choice");
             int choice = int.Parse(Console.ReadLine());
-            if (choice > 4 || choice < 1)
+            if (choice > 5 || choice < 1)
             {
-                Console.WriteLine("Choose the given choice.");
+                Console.WriteLine("Choose the given choice only.");
                 Console.ReadLine();
                 return;
             }
@@ -55,8 +55,12 @@ namespace calculator
                         }
                         a=Solution(Calculator.Division(a, b));
                         break;
+                    case 5:
+                        a = Solution(Calculator.Modulus(a, b));
+                        break;
+
                 }
-                Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division and -1 to exit: ");
+                Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division,  5 to Modulus and -1 to exit: ");
                 choice = int.Parse(Console.ReadLine());
                 if (choice == -1)
                 {

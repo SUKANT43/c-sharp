@@ -24,5 +24,9 @@ namespace calculator
         {
             return a / b;
         }
+        public static int Modulus(int a, int b)
+        {
+            return a % b;
+        }
     }
 }
