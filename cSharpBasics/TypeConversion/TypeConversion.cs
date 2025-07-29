@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cSharpBasics
+namespace cSharpBasics.Controller
 {
     class TypeConversion
     {
@@ -19,7 +19,7 @@ namespace cSharpBasics
 
             Console.WriteLine("Integer");
             string str = "10";
-            int c = (int)Convert.ToInt32(str);
+            int c = Convert.ToInt32(str);
             Console.WriteLine(c);
             int e = int.Parse(str);
             Console.WriteLine(e);
@@ -44,3 +44,4 @@ namespace cSharpBasics
 
     }
 }
+
