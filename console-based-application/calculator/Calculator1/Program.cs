@@ -4,34 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using CalcLib;
 
-namespace calculator
+namespace Calculator1
 {
     class Program
     {
-        public static int Add(int a, int b)
-        {
-            return a + b;
-        }
-        public static int Subract(int a, int b)
-        {
-            return a - b;
-        }
-        public static int Multiply(int a, int b)
-        {
-            return a * b;
-        }
-        public static int Division(int a, int b)
-        {
-            return a / b;
-        }
         public static int Modulus(int a, int b)
         {
             return a % b;
         }
         public static int Solution(int result)
         {
-            Console.WriteLine("Your Answer: "+ result);
+            Console.WriteLine("Your Answer: " + result);
             return result;
         }
         static void Main(string[] args)
@@ -49,21 +34,21 @@ namespace calculator
             int a = int.Parse(Console.ReadLine());
             Console.Write("Enter Number b:");
             int b = int.Parse(Console.ReadLine());
-            while(choice!=-1)
+            while (choice != -1)
             {
                 switch (choice)
                 {
                     case 1:
-                        a=Solution(Add(a, b));
+                        a = Solution(Calc.Add(a, b));
                         break;
 
                     case 2:
-                        a=Solution(Subract(a, b));
+                        a = Solution(Calc.Subract(a, b));
                         break;
 
                     case 3:
 
-                        a=Solution(Multiply(a, b));
+                        a = Solution(Calc.Multiply(a, b));
                         break;
 
                     case 4:
@@ -73,16 +58,14 @@ namespace calculator
                             Console.ReadLine();
                             return;
                         }
-                        a=Solution(Division(a, b));
+                        a = Solution(Calc.Division(a, b));
                         break;
-                    case 5:
-                        a = Solution(Modulus(a, b));
-                        break;
+                   
 
                 }
                 Console.WriteLine("Enter 1 to Add, 2 to Subract , 3 to Multiply, 4 to Division,  5 to Modulus and -1 to exit: ");
                 choice = int.Parse(Console.ReadLine());
-                if (choice == -1|| choice<-1  || choice==0 || choice>5)
+                if (choice == -1 || choice < -1 || choice == 0 || choice > 5)
                 {
                     return;
                 }
@@ -91,6 +74,5 @@ namespace calculator
             }
             Console.ReadLine();
         }
-
     }
 }
