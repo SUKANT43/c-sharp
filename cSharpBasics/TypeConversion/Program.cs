@@ -10,7 +10,8 @@ namespace cSharpBasics
     {
         static void Main(string[] args)
         {
-            Controller.TypeConversion.print();
+            //Controller.TypeConversion.print();
+            Operators.display();
         }
     }
 }
