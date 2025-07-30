@@ -12,6 +12,7 @@ namespace cSharpBasics
         {
             //Controller.TypeConversion.print();
             Operators.display();
+            //TypeConversion.Enum.display();
         }
     }
 }

@@ -34,14 +34,16 @@ namespace cSharpBasics
             object obj = "hello";
             string b = obj as string;
             Console.WriteLine(b);
+            Console.WriteLine(1 << 5);
 
            unsafe
             {
                 int c=10;
                 int* ptr = &c;
                 Console.WriteLine((int)ptr);
-                Console.WriteLine(*ptr);
+                Console.WriteLine(*ptr); 
             }
+            Console.WriteLine(~10);
 
             Console.ReadLine();
             
