@@ -15,8 +15,36 @@ namespace cSharpBasics
             Console.WriteLine();
             Console.Write("^: ");
             Console.Write(9^10);
+            Console.WriteLine();
+            string a = "hi";
+            if(a is string)
+            {
+                Console.WriteLine("I am string");
+            }
+
+            if(a is int)
+            {
+                Console.WriteLine("I am int");
+            }
+            else
+            {
+                Console.WriteLine("I am not int");
+            }
+
+            object obj = "hello";
+            string b = obj as string;
+            Console.WriteLine(b);
+
+           unsafe
+            {
+                int c=10;
+                int* ptr = &c;
+                Console.WriteLine((int)ptr);
+                Console.WriteLine(*ptr);
+            }
 
             Console.ReadLine();
+            
         }
     }
 }
