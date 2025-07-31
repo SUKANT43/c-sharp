@@ -39,6 +39,41 @@ namespace TypeConversion
             {
                 Console.WriteLine("Cast failed.");
             }
+            int e = 5, f = 6;
+            Console.WriteLine("Q1: " + (++e + f)); 
+
+            int g = 7, h = 3;
+            Console.WriteLine("Q2: " + (g-- * h));
+
+
+
+            int i = 12, j = 4, k = 2;
+            Console.WriteLine("Q3: " + ((i / j) / k));  
+
+            int l = 5, m = 2;
+            Console.WriteLine("Q4: " + (l * 2 & m + 1));  
+
+            double n = 3.9;
+            Console.WriteLine("Q5: " + (-(int)n + 1));  
+
+            int o = 1, p = 2, q = 3;
+            Console.WriteLine("Q6: " + (o++ + ++p * q--));  
+
+            string r = null;
+            string s = r ?? "Default";
+            Console.WriteLine("Q7: " + s);  
+
+            int t = 0;
+            bool result8 = (t++ == 0) || (t++ > 0);
+            Console.WriteLine("Q8: " + result8 + ", t = " + t);  
+
+            int u = 5, v = 10;
+            int result9 = (u > v ? u : v) * 2;
+            Console.WriteLine("Q9: " + result9);  
+
+            int w = 4;
+            Console.WriteLine("Q10: " + (~w << 1)); 
+
             Console.ReadLine();
         }
 
