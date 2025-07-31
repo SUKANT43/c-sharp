@@ -8,29 +8,40 @@ namespace TypeConversion
 {
     class A
     {
-        string name;
-        int age;
+        public string name;
+        public int age;
     }
 
     class B : A
     {
-        bool premium;
+        public bool premium;
     }
+
+    class c:B
+    {
+
+    }
+
     class Obj
     {
         public static void Display()
         {
-            A objA=new B();
-            B objB = objA as B;
+            A objA = new B { name = "Sukant", age = 25, premium = true };
+
+            c objB = objA as c;
+
             if (objB != null)
             {
-                Console.WriteLine("Casting successful");
+                Console.WriteLine("Name: " + objB.name);
+                Console.WriteLine("Premium: " + objB.premium);
             }
             else
             {
-                Console.WriteLine("Casting failed");
+                Console.WriteLine("Cast failed.");
             }
             Console.ReadLine();
         }
+
     }
 }
+
