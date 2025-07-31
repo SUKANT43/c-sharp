@@ -11,8 +11,9 @@ namespace cSharpBasics
         static void Main(string[] args)
         {
             //Controller.TypeConversion.print();
-            Operators.display();
+            //Operators.display();
             //TypeConversion.Enum.display();
+            TypeConversion.Obj.Display();
         }
     }
 }
