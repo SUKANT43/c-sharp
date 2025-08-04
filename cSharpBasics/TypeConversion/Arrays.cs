@@ -29,8 +29,20 @@ namespace TypeConversion
             int[] arr4 = { 1, 2, 3, 4, 5 };
             Array.Clear(arr4,1,3);
             foreach (var item in arr4)
+            {
                 Console.Write(item + " ");
-            Console.WriteLine(arr4.Length);
+            }
+            Console.WriteLine("Length: " + arr4.Length);
+
+            int[] original = { 1, 2, 3, 4, 5 };
+            int[] copy = new int[5];
+            Array.Copy(original,copy,original.Length);
+            for(int i = 0; i < copy.Length;i++)
+            {
+                Console.Write(copy[i]+ " ");
+            }
+
+
         }
     }
 }
