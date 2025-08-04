@@ -8,5 +8,6 @@ namespace StudentCourseManagement
 {
     class Student
     {
+
     }
 }

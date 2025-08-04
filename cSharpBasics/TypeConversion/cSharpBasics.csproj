@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Obj.cs" />
     <Compile Include="Operators.cs" />

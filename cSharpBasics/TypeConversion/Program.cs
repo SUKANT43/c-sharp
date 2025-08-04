@@ -13,7 +13,9 @@ namespace cSharpBasics
             //Controller.TypeConversion.print();
             //Operators.display();
             //TypeConversion.Enum.display();
-            TypeConversion.Obj.Display();
+            //TypeConversion.Obj.Display();
+            TypeConversion.Arrays.Display();
+            Console.ReadLine();
         }
     }
 }
