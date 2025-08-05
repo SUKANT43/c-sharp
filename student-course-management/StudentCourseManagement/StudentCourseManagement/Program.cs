@@ -10,6 +10,8 @@ namespace StudentCourseManagement
     {
         static void Main(string[] args)
         {
+
+            Console.ReadLine();
         }
     }
 }

@@ -36,9 +36,6 @@ namespace cSharpBasics.Controller
             double i;
             bool j = double.TryParse(str2, out i);
             Console.WriteLine(i);
-
-
-
             Console.ReadLine();
 
         }

@@ -36,13 +36,12 @@ namespace TypeConversion
 
             int[] original = { 1, 2, 3, 4, 5 };
             int[] copy = new int[5];
-            Array.Copy(original,copy,original.Length);
+            Array.Copy(original,copy,original.Length-2);
             for(int i = 0; i < copy.Length;i++)
             {
                 Console.Write(copy[i]+ " ");
-            }
-
-
+            } 
         }
     }
 }
+       
