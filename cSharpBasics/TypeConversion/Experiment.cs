@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace TypeConversion
 {
@@ -117,6 +118,54 @@ namespace TypeConversion
                 ++j;
                 Console.Write(fruits[j] + " ");
             } while (j < fruits.Length-1);
+
+
+            Console.WriteLine();
+            Console.Write("ForLoop Speed: ");
+            Stopwatch sw1 = new Stopwatch();
+
+            sw1.Start();
+            for(int i = 0; i < fruits.Length; i++)
+            {
+            }
+            sw1.Stop();
+            Console.Write(sw1.Elapsed);
+
+            Console.WriteLine();
+            Console.Write("WhileLoop Speed: ");
+            Stopwatch sw2 = new Stopwatch();
+            j = 0;
+            sw2.Start();
+            while (j < fruits.Length)
+            {
+                j++;
+            }
+            sw2.Stop();
+            Console.Write(sw2.Elapsed);
+
+            Console.WriteLine();
+            Console.Write("DoWhile Speed: ");
+            Stopwatch sw3 = new Stopwatch();
+            j = 0;
+            sw3.Start();
+            do
+            {
+                j++;
+            } while (j < fruits.Length);
+            sw3.Stop();
+            Console.Write(sw3.Elapsed);
+
+
+            Console.WriteLine();
+            Console.Write("ForEach Loop");
+            Stopwatch sw4 = new Stopwatch();
+            sw4.Start();
+            foreach(string b in fruits)
+            {
+
+            }
+            sw4.Stop();
+            Console.Write(sw4.Elapsed);
 
         }
     }
