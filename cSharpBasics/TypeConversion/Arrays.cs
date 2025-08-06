@@ -52,7 +52,7 @@ namespace TypeConversion
             }
         };
             Console.WriteLine("Multi Array");
-          for(int i = 0; i < 2; i++)
+          for(int i = 0; i < nums.Length; i++)
             {
                 for(int j = 0; j < 2; j++)
                 {
@@ -61,7 +61,7 @@ namespace TypeConversion
                         Console.WriteLine(nums[i,j,k]);
                     }
                 }
-            }
+           }
         }
     }
 }
