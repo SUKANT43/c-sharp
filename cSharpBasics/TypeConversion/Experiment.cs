@@ -47,6 +47,77 @@ namespace TypeConversion
                 Console.Write(a + " ");
             }
 
+            Console.WriteLine();
+            Console.WriteLine("While Loop");
+
+            int j = 0;
+            while (j < fruits.Length)
+            {
+                Console.Write(fruits[j]+" ");
+                j++;
+            }
+
+            Console.WriteLine();
+            j = 0;
+
+            while (j < fruits.Length)
+            {
+                Console.Write(fruits[j]+" ");
+                ++j;
+            }
+
+            j = 0;
+            Console.WriteLine();
+            while (j < fruits.Length-1)
+            {
+                j++;
+                Console.Write(fruits[j]+" ");
+            }
+
+            j = 0;
+            Console.WriteLine();
+            while (j < fruits.Length-1)
+            {
+                ++j;
+                Console.Write(fruits[j]+" ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Do While Loop");
+            j = 0;
+            do
+            {
+                Console.Write(fruits[j] + " ");
+                j++;
+            } while (j < fruits.Length);
+            Console.WriteLine();
+
+            j = 0;
+            do
+            {
+                Console.Write(fruits[j] + " ");
+                ++j;
+            } while (j < fruits.Length);
+
+            Console.WriteLine();
+
+            j = 0;
+            do
+            {
+                j++;
+                Console.Write(fruits[j] + " ");
+            } while (j < fruits.Length-1);
+
+
+            Console.WriteLine();
+
+            j = 0;
+            do
+            {
+                ++j;
+                Console.Write(fruits[j] + " ");
+            } while (j < fruits.Length-1);
+
         }
     }
 }
