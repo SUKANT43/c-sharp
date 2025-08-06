@@ -40,7 +40,28 @@ namespace TypeConversion
             for(int i = 0; i < copy.Length;i++)
             {
                 Console.Write(copy[i]+ " ");
-            } 
+            }
+            int[,,] nums = new int[2, 2, 3] {
+            {
+                {1,2,3 },
+                {1,2,3 }
+            },
+            {
+                {1,2,3 },
+                {1,2,3 }
+            }
+        };
+            Console.WriteLine("Multi Array");
+          for(int i = 0; i < 2; i++)
+            {
+                for(int j = 0; j < 2; j++)
+                {
+                    for(int k = 0; k < 3; k++)
+                    {
+                        Console.WriteLine(nums[i,j,k]);
+                    }
+                }
+            }
         }
     }
 }
