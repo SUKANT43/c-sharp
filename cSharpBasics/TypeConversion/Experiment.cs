@@ -14,19 +14,39 @@ namespace TypeConversion
             {
                 "Apple","Banana","WaterMellon","Kiwi","JackFruit","Orange"
             };
-
+            Console.WriteLine("Switch Case");
             switch (fruits.Length)
             {
                 case 6:
-                    Console.Write("6");
+                    Console.WriteLine("6");
                     break;
                 case 4:
-                    Console.Write("4");
+                    Console.WriteLine("4");
                     break;
                 default:
-                    Console.Write("done");
-                    break
+                    Console.WriteLine("done");
+                    break;
             }
+
+            Console.WriteLine("For loop");
+
+            for(int i = 0; i < fruits.Length; i++)
+            {
+                Console.Write(fruits[i]+" ");
+            }
+            Console.WriteLine();
+            for(int i = 0; i < fruits.Length; ++i)
+            {
+                Console.Write(fruits[i] + " ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("ForEach Loop");
+            foreach(string a in fruits)
+            {
+                Console.Write(a + " ");
+            }
+
         }
     }
 }
