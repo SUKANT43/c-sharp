@@ -125,7 +125,7 @@ namespace TypeConversion
             Stopwatch sw1 = new Stopwatch();
 
             sw1.Start();
-            for(int i = 0; i < fruits.Length; i++)
+            for(int i = 0; i < fruits.Length ; i++)
             {
             }
             sw1.Stop();
@@ -166,6 +166,7 @@ namespace TypeConversion
             }
             sw4.Stop();
             Console.Write(sw4.Elapsed);
+
 
         }
     }
