@@ -85,6 +85,7 @@ namespace TypeConversion
 
             Dictionary<int, int> dict2 = new Dictionary<int, int>();
             for (int i = 0; i < arr.Length; i++)
+
             {
                 if (dict2.ContainsKey(arr[i]))
                 {
@@ -100,6 +101,20 @@ namespace TypeConversion
             {
                 Console.WriteLine($"Number: {pair.Key}, Count: {pair.Value}");
             }
+
+            Console.WriteLine("ArrayList methods");
+            List<int> list = new List<int>();
+            list.Add(10);
+            list.AddRange(new int[] {1,2,3,4,5,6,7,7, });
+            list.Insert(0, 100);
+            list.Remove(4);
+            list.RemoveAt(5);
+            Console.WriteLine(list.Contains(7));
+            Console.WriteLine(list.IndexOf(5));
+            Console.WriteLine(list.Count);
+            list.Sort();
+            list.Reverse();
+            Console.WriteLine(string.Join(", ", list));
         }
     }
 }
