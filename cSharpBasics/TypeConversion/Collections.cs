@@ -80,6 +80,26 @@ namespace TypeConversion
                 Console.WriteLine(pair.Key + " " + pair.Value);
             }
 
+            Console.Write("Count the frequency of the number using Dictionary");
+            int[] arr = { 10, 20, 30, 40, 50, 20, 60, 70, 10, 80, 90, 100, 30, 110, 120, 130, 40, 140, 150, 160, 170, 180, 190, 100, 200, 210, 220, 230, 240, 250 };
+
+            Dictionary<int, int> dict2 = new Dictionary<int, int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (dict2.ContainsKey(arr[i]))
+                {
+                    dict2[arr[i]] += 1;
+                }
+                else
+                {
+                    dict2[arr[i]] = 1;
+                }
+            }
+
+            foreach(var pair in dict2)
+            {
+                Console.WriteLine($"Number: {pair.Key}, Count: {pair.Value}");
+            }
         }
     }
 }
