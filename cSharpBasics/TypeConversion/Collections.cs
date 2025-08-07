@@ -41,8 +41,32 @@ namespace TypeConversion
             object c = (int)q1.Dequeue();
             Console.WriteLine(c);
             q1.Enqueue(10);
+            Console.WriteLine(q1.Peek());
             Console.WriteLine(q1.Count);
 
+            Console.WriteLine("Generic: ");
+            Console.WriteLine("List");
+            List<int> list2 = new List<int>();
+            list2.Add(10);
+            list2.Add(30);
+            list2.Add(40);
+            list2.Remove(40);
+            for(int i = 0; i < list2.Count; i++)
+            {
+                Console.WriteLine(list2[i]);
+            }
+
+            Console.WriteLine("Set");
+            HashSet<int> set = new HashSet<int>();
+            set.Add(10);
+            set.Add(10);
+            set.Add(100);
+            set.Add(200);
+            Console.WriteLine(set.Count);
+            foreach(int e in set)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }
