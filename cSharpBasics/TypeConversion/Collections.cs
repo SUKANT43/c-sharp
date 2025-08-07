@@ -142,7 +142,27 @@ namespace TypeConversion
             Console.WriteLine(set1.Count);
             Console.WriteLine(string.Join(", ", set1));
 
+            Console.WriteLine("Linked List");
+            LinkedList<int> list3 = new LinkedList<int>();
+            list3.AddFirst(20);
+            list3.AddFirst(30);
+            list3.AddLast(30);
+            Collections.print(list3);
 
+            LinkedListNode<int> node =  list3.Find(20);
+            list3.AddBefore(node,40);
+            list3.AddAfter(node, 10000);
+            Collections.print(list3);
+
+        }
+        public static void print(LinkedList<int> list)
+        {
+            Console.Write("LinkedList: ");
+            foreach(var ans in list)
+            {
+                Console.Write(ans+" ");
+            }
+            Console.WriteLine();
         }
     }
 }
