@@ -67,6 +67,19 @@ namespace TypeConversion
             {
                 Console.WriteLine(e);
             }
+            Console.WriteLine("Dictionary");
+            Dictionary<int, string> dict = new Dictionary<int, string>();
+            dict.Add(1, "hi");
+            dict.Add(2, "hello");
+            dict.Add(3, "hey");
+            Console.WriteLine(dict.Remove(3));
+            Console.WriteLine(dict.Count);
+
+            foreach(KeyValuePair<int,string>pair in dict)
+            {
+                Console.WriteLine(pair.Key + " " + pair.Value);
+            }
+
         }
     }
 }
