@@ -154,6 +154,17 @@ namespace TypeConversion
             list3.AddAfter(node, 10000);
             Collections.print(list3);
 
+            Console.WriteLine("IEnumerable:");
+            List<string> ls = new List<string>();
+            ls.Add("hi");
+            ls.Add("hello");
+            ls.Add("hey");
+            IEnumerable<string> en = ls;
+            foreach(string a in en)
+            {
+                Console.WriteLine(a);
+            }
+
         }
         public static void print(LinkedList<int> list)
         {
