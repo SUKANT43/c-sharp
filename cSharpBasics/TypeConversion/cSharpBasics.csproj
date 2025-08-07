@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
+    <Compile Include="Collections.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Experiment.cs" />
     <Compile Include="Obj.cs" />

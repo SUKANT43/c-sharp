@@ -3,10 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections;
 namespace TypeConversion
 {
     class Collections
     {
+        public static void display()
+        {
+            Console.WriteLine("Non-Generic:");
+            Console.WriteLine("List: ");
+            ArrayList list1 = new ArrayList();
+            list1.Add("hi");
+            list1.Add(2);
+            list1.Add(4);
+            list1.Remove(4);
+            
+            for(int i = 0; i < list1.Count; i++)
+            {
+                dynamic ans = list1[i];
+                Console.WriteLine(ans);
+            }
+
+            Console.WriteLine("Stack: ");
+            Stack st1 = new Stack();
+            st1.Push(10);
+            st1.Push("Hello");
+            st1.Push("Hey");
+            dynamic b = st1.Pop();
+            Console.WriteLine(b);
+            st1.Peek();
+            Console.WriteLine(st1.Count);
+
+            Console.WriteLine("Queue: ");
+            Queue q1 = new Queue();
+            q1.Enqueue(10);
+            q1.Enqueue(20);
+            object c = (int)q1.Dequeue();
+            Console.WriteLine(c);
+            q1.Enqueue(10);
+            Console.WriteLine(q1.Count);
+
+        }
     }
 }
