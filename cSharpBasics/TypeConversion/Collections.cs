@@ -44,6 +44,18 @@ namespace TypeConversion
             Console.WriteLine(q1.Peek());
             Console.WriteLine(q1.Count);
 
+            Console.WriteLine("HashTable:");
+            Hashtable ht = new Hashtable();
+            ht.Add("hi", 10);
+            ht.Add(10, 100);
+            ht.Add(94, "hello");
+            foreach(DictionaryEntry entry in ht)
+            {
+                Console.WriteLine("Key: " + entry.Key + ", Value: " + entry.Value);
+
+            }
+
+
             Console.WriteLine("Generic: ");
             Console.WriteLine("List");
             List<int> list2 = new List<int>();
@@ -96,6 +108,7 @@ namespace TypeConversion
                     dict2[arr[i]] = 1;
                 }
             }
+            dict2[1000000] = 1000;
 
             foreach(var pair in dict2)
             {
@@ -115,6 +128,21 @@ namespace TypeConversion
             list.Sort();
             list.Reverse();
             Console.WriteLine(string.Join(", ", list));
+
+            Console.WriteLine("HashSet Methods");
+            HashSet<int> set1 = new HashSet<int>();
+            set1.Add(1);
+            set1.Add(2);
+            set1.Add(3);
+            set1.Add(4);
+            set1.Add(5);
+            set1.Add(6);
+            set1.Remove(6);
+            Console.WriteLine(set1.Contains(5));
+            Console.WriteLine(set1.Count);
+            Console.WriteLine(string.Join(", ", set1));
+
+
         }
     }
 }
