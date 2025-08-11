@@ -19,14 +19,22 @@ namespace Pattern
             for(int i = 0; i < n; i++)
             {
                 List<string> dummyList = new List<string>();
-                for(int j = 0; j < n - i-1 ; j++)
+                for(int times = 0; times < tm; times++)
                 {
-                    dummyList.Add(" ");
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        dummyList.Add(" ");
+                    }
+                    for (int k = 0; k <= i; k++)
+                    {
+                        dummyList.Add("* ");
+                    }
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        dummyList.Add(" ");
+                    }
                 }
-                for(int k = 0; k <= i; k++)
-                {
-                    dummyList.Add("*");
-                }
+              
                 list.Add(dummyList);
             }
 
@@ -34,17 +42,26 @@ namespace Pattern
             for (int i = n-2; i>=0 ; i--)
             {
                 List<string> dummyList = new List<string>();
-                for (int j = 0; j < n - i - 1; j++)
+                for (int times = 0; times < tm; times++)
                 {
-                    dummyList.Add(" ");
-                }
-                for (int k = 0; k <= i; k++)
-                {
-                    dummyList.Add("*");
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        dummyList.Add(" ");
+                    }
+                    for (int k = 0; k <= i; k++)
+                    {
+                        dummyList.Add("* ");
+                    }
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        dummyList.Add(" ");
+                    }
                 }
                 list.Add(dummyList);
             }
 
+            //row wise
+            Console.WriteLine("Row wise:");
             for (int i = 0; i < list.Count; i++)
             {
                 for (int j = 0; j < list[i].Count; j++)
@@ -54,7 +71,24 @@ namespace Pattern
                 Console.WriteLine();
             }
 
-            Console.ReadLine();
+            Console.WriteLine("Col Wise");
+
+            //col wise
+            for(int i = 0; i < tm; i++)
+            {
+                for(int j = 0; j < list.Count; j++)
+                {
+                    for(int k = 0; k < n; k++)
+                    {
+                        Console.Write(list[j][k]);
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+            
+
+             Console.ReadLine();
         }
     }
 }
