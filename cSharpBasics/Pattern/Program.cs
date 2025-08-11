@@ -15,8 +15,20 @@ namespace Pattern
             Console.WriteLine("tm: ");
             int tm = int.Parse(Console.ReadLine());
             List<List<string>> list = new List<List<string>>();
+            int n1 = 0;
+            int n2 = 0;
+            if (n % 2 != 0)
+            {
+                n1 = (n / 2) + 1;
+                n2=n/2;
+            }
+            else
+            {
+                n1 = n / 2;
+                n2 = n / 2;
+            }
             //up
-            for(int i = 0; i < n; i++)
+            for(int i = 0; i < n1; i++)
             {
                 List<string> dummyList = new List<string>();
                 for(int times = 0; times < tm; times++)
@@ -39,7 +51,7 @@ namespace Pattern
             }
 
             //down
-            for (int i = n-2; i>=0 ; i--)
+            for (int i = n2-1; i>=0 ; i--)
             {
                 List<string> dummyList = new List<string>();
                 for (int times = 0; times < tm; times++)
