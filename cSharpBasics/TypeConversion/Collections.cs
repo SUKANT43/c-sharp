@@ -165,6 +165,16 @@ namespace TypeConversion
                 Console.WriteLine(a);
             }
 
+            List<string> fruits = new List<string>();
+            fruits.Add("Apple");
+            fruits.Add("Banana");
+            fruits.Add("Orange");
+            fruits.Add("Plum");
+            IEnumerator enumer = fruits.GetEnumerator();
+            enumer.MoveNext();
+            Console.WriteLine(enumer.Current);
+
+
         }
         public static void print(LinkedList<int> list)
         {
