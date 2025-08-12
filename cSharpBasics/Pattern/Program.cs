@@ -25,7 +25,9 @@ namespace Pattern
             else
             {
                 n1 = n / 2;
-                n2 = n / 2;
+                n2=n/2;
+
+
             }
             //up
             for(int i = 0; i < n1; i++)

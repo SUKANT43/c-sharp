@@ -16,7 +16,8 @@ namespace cSharpBasics
             //TypeConversion.Obj.Display();
             //TypeConversion.Arrays.Display();
             // TypeConversion.Experiment.display();
-            TypeConversion.Collections.display();
+            //TypeConversion.Collections.display();
+            TypeConversion.Deleg.display();
             Console.ReadLine();
         }
     }
