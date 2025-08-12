@@ -18,6 +18,7 @@ namespace cSharpBasics
             // TypeConversion.Experiment.display();
             //TypeConversion.Collections.display();
             TypeConversion.Deleg.display();
+            TypeConversion.Event.display();
             Console.ReadLine();
         }
     }
