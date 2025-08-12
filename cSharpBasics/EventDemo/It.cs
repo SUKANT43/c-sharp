@@ -14,7 +14,7 @@ namespace EventDemo
             this.employeeSeperator = employeeSeperator;
             employeeSeperator.EmployeesSeperated += EmployeeSeperatedEventHandler;
         }
-        public void EmployeeSeperatedEventHandler()
+        public void EmployeeSeperatedEventHandler(object sender, EmployeeEventArgs e)
         {
             Console.WriteLine("It department: employee seperation process related to finance");
         }
