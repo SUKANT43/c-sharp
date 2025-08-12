@@ -10,6 +10,11 @@ namespace EventDemo
     {
         static void Main(string[] args)
         {
+            EmployeeSeperator employeeSeperator = new EmployeeSeperator();
+            Finance finance = new Finance(employeeSeperator);
+            It it = new It(employeeSeperator);
+            employeeSeperator.Seperate();
+            Console.ReadLine();
         }
     }
 }
