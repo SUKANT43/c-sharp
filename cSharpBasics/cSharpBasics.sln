@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoorEvent", "DoorEvent\Door
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoorEvent2", "DoorEvent2\DoorEvent2.csproj", "{EBD3604D-ED03-4989-BB4E-5DCA4CAFCBD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoorEvent3", "DoorEvent3\DoorEvent3.csproj", "{FC108FE6-DF3A-4EDF-B3A4-62D5E48BC89B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{EBD3604D-ED03-4989-BB4E-5DCA4CAFCBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD3604D-ED03-4989-BB4E-5DCA4CAFCBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD3604D-ED03-4989-BB4E-5DCA4CAFCBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC108FE6-DF3A-4EDF-B3A4-62D5E48BC89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC108FE6-DF3A-4EDF-B3A4-62D5E48BC89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC108FE6-DF3A-4EDF-B3A4-62D5E48BC89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC108FE6-DF3A-4EDF-B3A4-62D5E48BC89B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
