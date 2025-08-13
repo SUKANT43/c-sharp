@@ -40,6 +40,30 @@ namespace TypeConversion
           
             PrintToFile("hello hi");
             print("hello hi");
+            Deleg.display2();
+        }
+
+        public static void add(int a,int b)
+        {
+            Console.WriteLine(a + b);
+        }
+
+        public static void sub(int a,int b)
+        {
+            Console.WriteLine(a - b);
+        }
+
+        public delegate void Math(int a, int b);
+        public static void display2()
+        {
+            Console.WriteLine("Delegate Type 2:");
+            Math a = add;
+            a(2, 3);
+            a(5, 6);
+            Math b = sub;
+            b(5, 2);
+            b(2, 2);
+
         }
 
     }
