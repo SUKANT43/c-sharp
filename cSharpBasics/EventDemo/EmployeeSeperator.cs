@@ -14,7 +14,7 @@ namespace EventDemo
     }
     class EmployeeSeperator
     {
-        public delegate void EmployeeSeperatedEventHandler();
+        //public delegate void EmployeeSeperatedEventHandler();
         //public event EmployeeSeperatedEventHandler EmployeesSeperated;
         public event EventHandler<EmployeeEventArgs> EmployeesSeperated;
         public void Seperate()

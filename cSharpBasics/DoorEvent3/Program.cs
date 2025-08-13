@@ -15,6 +15,6 @@ namespace DoorEvent3
             CloseDoor close = new CloseDoor(acc);
             acc.newPerson();
             Console.ReadLine();
-        }
+        } 
     }
 }
