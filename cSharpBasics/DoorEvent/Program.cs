@@ -12,6 +12,7 @@ namespace DoorEvent
         {
             Access access = new Access();
             OpenDoor open = new OpenDoor(access);
+            CloseDoor close = new CloseDoor(access);
             access.Allow();
             Console.ReadLine();
         }
