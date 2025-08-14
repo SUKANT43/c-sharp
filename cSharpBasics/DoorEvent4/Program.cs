@@ -8,14 +8,14 @@ namespace DoorEvent4
 {
     class Program
     {
-        static void OpenDoor()
+        static void OpenDoor(string id)
         {
-            Console.WriteLine("Door is now OPEN.");
+            Console.WriteLine("Door is now OPEN "+id);
         }
 
-        static void CloseDoor()
+        static void CloseDoor(string id)
         {
-            Console.WriteLine("Door is now CLOSED.");
+            Console.WriteLine("Door is now CLOSED "+id);
         }
 
         static void Main(string[] args)
@@ -23,8 +23,8 @@ namespace DoorEvent4
             SecuritySystem system = new SecuritySystem();
             system.DoorOperation += OpenDoor;
             system.DoorOperation += CloseDoor;
-            system.verifyUser();
-           // SecuritySystem system2 = null;
+            system.verifyUser("EC326");
+            //SecuritySystem system2 = null;
             //system2.DoorOperation += OpenDoor;
             //system2.DoorOperation += CloseDoor;
             //system2.verifyUser();
