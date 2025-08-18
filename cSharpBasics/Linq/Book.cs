@@ -47,11 +47,26 @@ namespace Linq
                                                          where b.AuthorId == a.AuthorId
                                                          select b).Count()
                                         };
-            foreach(var a in numberOfBooksByAuthor)
+
+
+            foreach (var a in numberOfBooksByAuthor)
             {
                 Console.WriteLine($"Name: {a.AuthorName}, Number of Books: {a.BookCount}");
             }
+            Console.WriteLine();
+            Console.WriteLine("Number of books published by a author using query Syntax: ");
 
+
+            var numberOfBooksByAuthor2 = authors.Select(a => new
+            {
+                AuthorName = a.Name,
+                BookCount = books.Count(b => a.AuthorId == b.AuthorId)
+            });
+
+            foreach (var a in numberOfBooksByAuthor2)
+            {
+                Console.WriteLine($"Name: {a.AuthorName}, Number of Books: {a.BookCount}");
+            }
 
 
         }
