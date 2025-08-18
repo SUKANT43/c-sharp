@@ -44,13 +44,55 @@ namespace Linq
             var highSalry = from emp in employees
                             where emp.Salary > (from x in employees select x.Salary).Average()
                             select new { emp.Name, emp.Salary };
-            
+
             Console.WriteLine();
             Console.WriteLine("Salary higher than average using query: ");
-            foreach(var e in highSalry)
+            foreach (var e in highSalry)
             {
                 Console.WriteLine($"Name: {e.Name} Salary: {e.Salary}");
             }
+            var avg = employees.Average(e => e.Salary);
+            var lowSalary = employees.Where(e => e.Salary < avg)
+                .Select(e => new { e.Name, e.Salary });
+
+            Console.WriteLine();
+            Console.WriteLine("Salary lower than average using query syntax: ");
+            foreach (var e in lowSalary)
+            {
+                Console.WriteLine($"Name: {e.Name} Salary: {e.Salary}");
+
+            }
+
+
+            Console.WriteLine();
+            Console.WriteLine("Company named google using Query: ");
+
+            var googleEmployees = from emp in employees
+                                  where emp.CompanyId == (from comp in companies where comp.CompanyName == "Google" select comp.CompanyId).FirstOrDefault()
+                                  select new{emp.Name, emp.Salary};
+
+            foreach(var emp in googleEmployees)
+            {
+                Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Company named google using Query Syntax: ");
+
+            var googleEmployee2 = employees
+                .Where(e => e.CompanyId == companies.Where(c => c.CompanyName == "Google")
+                .Select(c => c.CompanyId)
+                .FirstOrDefault())
+                .Select(e => new { e.Name, e.Salary });
+            foreach (var emp in googleEmployee2)
+            {
+                Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+            }
+
+
+
         }
+
+
     }
 }
