@@ -15,7 +15,11 @@ namespace Linq
             var evens = from num in numbers
                         where num % 2 == 0
                         select num;
+
+            var evens2 = numbers.Where(num => num % 2 == 0);
             Console.WriteLine(string.Join(", ", evens));
+            Console.WriteLine(string.Join(" ,",evens2));
+            Linq.Obj.Display();
             Console.ReadLine();
         }
     }
