@@ -22,6 +22,7 @@ namespace Linq
             Linq.Obj.Display();
             Linq.Manipulate.display();
             Linq.Disp.display();
+            Linq.Disp2.Display();
             Console.ReadLine();
         }
     }
