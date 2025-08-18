@@ -49,7 +49,7 @@ namespace Linq
                 new Result { id = "S10", mark = 81 }
             };
             Console.WriteLine();
-            Console.WriteLine("Join both result and student using query");
+            Console.WriteLine("Join both result and student using query:");
 
 
             var FinalResult = (from s in listOfStudents
@@ -70,8 +70,8 @@ namespace Linq
                 (s, r) => new { s.id, s.name, r.mark })
                 .OrderBy(x => x.id)
                 .ToList();
-
-            Console.WriteLine("Join using query syntax");
+            Console.WriteLine();
+            Console.WriteLine("Join using query syntax:");
             foreach (var res in FinalResult2)
             {
                 Console.WriteLine($"Id: {res.id} Name: {res.name} Mark: {res.mark}");

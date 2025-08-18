@@ -21,6 +21,7 @@ namespace Linq
             Console.WriteLine(string.Join(" ,",evens2));
             Linq.Obj.Display();
             Linq.Manipulate.display();
+            Linq.Disp.display();
             Console.ReadLine();
         }
     }
