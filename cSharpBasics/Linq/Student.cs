@@ -19,6 +19,8 @@ namespace Linq
         }
     }
 
+
+
     class Obj
     {
         public static void Display()
@@ -36,24 +38,20 @@ namespace Linq
             list.Add(new Student("S11", "Bala", "A"));
             list.Add(new Student("S10", "Jack", "A"));
 
-            var listOfSectionA=from ls in list
+            var listOfSectionA=(from ls in list
                                where ls.section=="A"
                                orderby ls.name
-                                select ls;
+                                select ls).First();
 
             var listOfSectionA2 = list.Where(ls => ls.section == "A")
-                .OrderByDescending(ls=>ls.name);
-            foreach (var student in listOfSectionA)
-            {
-                Console.WriteLine($"ID: {student.id}, Name: {student.name}, Section: {student.section}");
-            }
+                .OrderBy(ls => ls.name)
+                .ThenBy(ls => ls.section)
+                .First();
+          
+            Console.WriteLine($"ID: {listOfSectionA.id}, Name: {listOfSectionA.name}, Section: {listOfSectionA.section}");  
             Console.WriteLine();
             Console.WriteLine("2nd type: ");
-            foreach (var student in listOfSectionA2)
-            {
-                Console.WriteLine($"ID: {student.id}, Name: {student.name}, Section: {student.section}");
-            }
-
+            Console.WriteLine($"ID: {listOfSectionA2.id}, Name: {listOfSectionA2.name}, Section: {listOfSectionA2.section}");
         }
     }
 }
