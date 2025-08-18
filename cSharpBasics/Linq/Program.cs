@@ -20,6 +20,7 @@ namespace Linq
             Console.WriteLine(string.Join(", ", evens));
             Console.WriteLine(string.Join(" ,",evens2));
             Linq.Obj.Display();
+            Linq.Manipulate.display();
             Console.ReadLine();
         }
     }

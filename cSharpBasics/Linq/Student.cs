@@ -19,12 +19,13 @@ namespace Linq
         }
     }
 
-
+        
 
     class Obj
     {
         public static void Display()
         {
+            Console.WriteLine("Basic Linq:");
             List<Student> list = new List<Student>();
             list.Add(new Student("S01", "Alice", "A"));
             list.Add(new Student("S02", "Bob", "A"));
@@ -47,10 +48,10 @@ namespace Linq
                 .OrderBy(ls => ls.name)
                 .ThenBy(ls => ls.section)
                 .First();
-          
+            Console.WriteLine("Using Query:");
             Console.WriteLine($"ID: {listOfSectionA.id}, Name: {listOfSectionA.name}, Section: {listOfSectionA.section}");  
             Console.WriteLine();
-            Console.WriteLine("2nd type: ");
+            Console.WriteLine("Using Query syntax : ");
             Console.WriteLine($"ID: {listOfSectionA2.id}, Name: {listOfSectionA2.name}, Section: {listOfSectionA2.section}");
         }
     }
