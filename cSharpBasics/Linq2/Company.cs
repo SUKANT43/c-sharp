@@ -27,7 +27,8 @@ namespace Linq2
                 {
                 new Company { CompanyId = 1, CompanyName = "Microsoft" },
                 new Company { CompanyId = 2, CompanyName = "Google" },
-                new Company { CompanyId = 3, CompanyName = "Amazon" }
+                new Company { CompanyId = 3, CompanyName = "Amazon" },
+                new Company { CompanyId = 4, CompanyName = "Facebook" }
                 };
 
             List<Employee> employees = new List<Employee>()
@@ -54,6 +55,39 @@ namespace Linq2
                 Console.WriteLine($"{item.EmployeeName} works at {item.CompanyName}");
             }
 
+            var companyWithEmployees = companies.GroupJoin(
+                employees,
+                c => c.CompanyId,
+                e => e.CompanyId,
+                (c, e) => new { c.CompanyName, Employees = e });
+            foreach (var group in companyWithEmployees)
+            {
+                Console.WriteLine(group.CompanyName);
+                foreach (var emp in group.Employees)
+                    Console.WriteLine("   " + emp.EmployeeName);
+            }
+            var leftJoin = companies.GroupJoin(
+                employees,
+                (c)=>c.CompanyId,
+                (e)=>e.CompanyId,
+                (c, e) => new {c.CompanyName,Employees=e.DefaultIfEmpty()}
+                );
+            foreach (var group in leftJoin)
+            {
+                foreach (var emp in group.Employees)
+                    Console.WriteLine($"{group.CompanyName} - {(emp?.EmployeeName ?? "No Employee")}");
+            }
+
+            var crossJoin = employees.SelectMany(
+                e=>companies,
+                (e, c) => new{e.EmployeeName,c.CompanyName }
+                );
+            foreach (var item in crossJoin)
+                Console.WriteLine($"{item.EmployeeName} - {item.CompanyName}");
+
+            var compName = companies.Where(e => e.CompanyName.Contains("cro"));
+            foreach (var item in compName)
+                Console.WriteLine($"{item.CompanyName}");
         }
     }
 }
