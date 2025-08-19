@@ -10,7 +10,8 @@ namespace Linq2
     {
         static void Main(string[] args)
         {
-            Disp.display();
+            //Disp.display();
+            Disp2.display();
             Console.ReadLine();
         }
 

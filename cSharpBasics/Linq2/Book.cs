@@ -66,6 +66,19 @@ namespace Linq2
             /*var smallTitle = books.Min(b => b.Title.Length);
             Console.WriteLine(smallTitle);*/
 
+            /* var startsWithA = books.Where(b => b.Title.StartsWith("A"))
+                 .FirstOrDefault();
+             Console.WriteLine(startsWithA.Title);*/
+
+
+            /*var countOfAuthors = books.GroupBy(b => b.Author)
+                .Select(g => new
+                {
+                    Author = g.Key,
+                    Count = g.Count()
+                })
+                .OrderByDescending(g=>g.Count);*/
+
 
             List<int> list = new List<int>();
             foreach (var b in list)
