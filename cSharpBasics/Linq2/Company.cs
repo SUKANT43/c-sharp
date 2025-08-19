@@ -23,12 +23,12 @@ namespace Linq2
     {
         public static void display()
         {
-                            List<Company> companies = new List<Company>()
-                            {
-                            new Company { CompanyId = 1, CompanyName = "Microsoft" },
-                            new Company { CompanyId = 2, CompanyName = "Google" },
-                            new Company { CompanyId = 3, CompanyName = "Amazon" }
-                            };
+                List<Company> companies = new List<Company>()
+                {
+                new Company { CompanyId = 1, CompanyName = "Microsoft" },
+                new Company { CompanyId = 2, CompanyName = "Google" },
+                new Company { CompanyId = 3, CompanyName = "Amazon" }
+                };
 
             List<Employee> employees = new List<Employee>()
             {
@@ -39,8 +39,21 @@ namespace Linq2
                 new Employee { EmployeeId = 5, EmployeeName = "Emma", CompanyId = 2 }
             };
 
+            var employeeAndTheirCompany = employees.Join(
+                companies,
+                e=>e.CompanyId,
+                c=>c.CompanyId,
+                (e, c)=>new
+                {
+                    EmployeeName=e.EmployeeName,
+                    CompanyName=c.CompanyName
+                }
+                );
+            foreach (var item in employeeAndTheirCompany)
+            {
+                Console.WriteLine($"{item.EmployeeName} works at {item.CompanyName}");
+            }
 
-        
         }
     }
 }
