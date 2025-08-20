@@ -13,7 +13,8 @@ namespace Day_2
             //Disp.disp();
             //Disp2.disp2();
             //Disp3.disp3();
-            Disp4.disp4();
+            //Disp4.disp4();
+            Disp5.disp5();
             Console.ReadLine();
         }
     }
