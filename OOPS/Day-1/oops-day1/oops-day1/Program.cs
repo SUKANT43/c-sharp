@@ -10,6 +10,10 @@ namespace oops_day1
     {
         static void Main(string[] args)
         {
+
+            Dis1.disp();
+
+            Console.ReadLine();
         }
     }
 }
