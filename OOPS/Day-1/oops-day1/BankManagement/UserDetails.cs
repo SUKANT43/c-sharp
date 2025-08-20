@@ -41,6 +41,8 @@ namespace BankManagement
             set {if(balance>=value) balance -= value; }
         }
 
+
+
         public long checkBalance
         {
             get { return balance; }
