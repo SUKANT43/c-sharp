@@ -11,8 +11,8 @@ namespace oops_day1
         static void Main(string[] args)
         {
 
-            Dis1.disp();
-
+            //Dis1.disp();
+            Disp2.disp();
             Console.ReadLine();
         }
     }
