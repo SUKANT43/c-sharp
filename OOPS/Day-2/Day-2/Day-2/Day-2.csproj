@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="OverLoading.cs" />
