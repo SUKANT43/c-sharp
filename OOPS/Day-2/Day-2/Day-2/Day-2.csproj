@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract.cs" />
+    <Compile Include="Abstract2.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="OverLoading.cs" />
