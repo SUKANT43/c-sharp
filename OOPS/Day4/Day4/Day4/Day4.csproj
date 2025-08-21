@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Encapsulation.cs" />
     <Compile Include="Encapsulation2.cs" />
+    <Compile Include="Encapsulation3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

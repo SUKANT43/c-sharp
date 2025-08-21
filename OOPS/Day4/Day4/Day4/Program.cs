@@ -11,7 +11,8 @@ namespace Day4
         static void Main(string[] args)
         {
             //Disp1.disp1();
-            Disp2.disp2();
+            //Disp2.disp2();
+            Disp3.disp3();
             Console.ReadLine();
         }
     }
