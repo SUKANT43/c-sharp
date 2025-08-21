@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD440F8E-3CF9-4935-A922-946522396AF5}</ProjectGuid>
+    <ProjectGuid>{46D70CCD-0F36-4A9C-8623-48124D351595}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day3</RootNamespace>
-    <AssemblyName>Day3</AssemblyName>
+    <RootNamespace>Day4</RootNamespace>
+    <AssemblyName>Day4</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface.cs" />
-    <Compile Include="MultipleInheritance.cs" />
+    <Compile Include="Encapsulation.cs" />
+    <Compile Include="Encapsulation2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
