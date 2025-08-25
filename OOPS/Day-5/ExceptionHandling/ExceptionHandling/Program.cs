@@ -22,12 +22,59 @@ namespace ExceptionHandling
                     throw new InvalidAgeException("Age must 18 or above");
                 }
             }
-            catch (Exception e)
+            catch (InvalidAgeException e)
             {
                 Console.WriteLine(e.Message);
             }
-            Console.ReadLine();
 
+            try
+            {
+                int[] arr = { 1, 2, 3, 4, 5 };
+                int a = arr[8];
+            }
+            catch(IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);        
+            }
+
+            try
+            {
+                int num = int.Parse("jhfb");
+            }
+            catch(FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            try
+            {
+                string name = null;
+                Console.WriteLine(name.Length);
+            }
+            catch(NullReferenceException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            try
+            {
+                int x = 10;
+                int y = 0;
+                int res =x / y;
+            }
+
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+
+            Console.ReadLine();
         }
     }
 }
