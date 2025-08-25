@@ -32,7 +32,7 @@ namespace ExceptionHandling
                 int[] arr = { 1, 2, 3, 4, 5 };
                 int a = arr[8];
             }
-            catch(IndexOutOfRangeException e)
+            catch(Exception e)
             {
                 Console.WriteLine(e.Message);        
             }
@@ -40,6 +40,8 @@ namespace ExceptionHandling
             try
             {
                 int num = int.Parse("jhfb");
+                string a = null;
+                Console.WriteLine(a);
             }
             catch(FormatException e)
             {
@@ -47,6 +49,7 @@ namespace ExceptionHandling
             }
             catch(Exception e)
             {
+
                 Console.WriteLine(e.Message);
             }
 

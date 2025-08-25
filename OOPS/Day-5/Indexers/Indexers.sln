@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexers", "Indexers\Indexers.csproj", "{EA07BE48-A0D8-47B3-9998-82DD84C73299}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events and Delegates", "Events and Delegates\Events and Delegates.csproj", "{2FB70A0E-F342-4135-8A6F-D7CABCFFEE62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EA07BE48-A0D8-47B3-9998-82DD84C73299}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA07BE48-A0D8-47B3-9998-82DD84C73299}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA07BE48-A0D8-47B3-9998-82DD84C73299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB70A0E-F342-4135-8A6F-D7CABCFFEE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB70A0E-F342-4135-8A6F-D7CABCFFEE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB70A0E-F342-4135-8A6F-D7CABCFFEE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB70A0E-F342-4135-8A6F-D7CABCFFEE62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
