@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FB70A0E-F342-4135-8A6F-D7CABCFFEE62}</ProjectGuid>
+    <ProjectGuid>{46F128BB-D2F2-4E2B-8F5A-AEF2ECECE1D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Events_and_Delegates</RootNamespace>
-    <AssemblyName>Events and Delegates</AssemblyName>
+    <RootNamespace>Task_Management_System</RootNamespace>
+    <AssemblyName>Task_Management_System</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Disp1.cs" />
-    <Compile Include="Disp2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

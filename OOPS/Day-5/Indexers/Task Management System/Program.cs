@@ -4,17 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Events_and_Delegates
+namespace Task_Management_System
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Disp1.disp1();
-            Disp2 di = new Disp2();
-            di.OnNotify += msg => Console.WriteLine("hi..");
-            di.disp2();
-            Console.ReadLine();
         }
     }
 }
