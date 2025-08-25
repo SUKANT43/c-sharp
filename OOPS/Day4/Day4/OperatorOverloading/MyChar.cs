@@ -24,7 +24,6 @@ namespace OperatorOverloading
             return c1.ch != c2.ch;
         }
 
-
     }
 
     class Disp
