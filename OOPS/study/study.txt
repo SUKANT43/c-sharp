@@ -1,0 +1,161 @@
+📅 Day 1 – OOP Foundations
+
+What is OOP? Why OOP in C#?
+
+Class & Object
+
+Fields, Properties, Methods
+
+Constructors (Default, Parameterized, Copy Constructor)
+
+this keyword
+
+Access Modifiers (public, private, protected, internal, protected internal)
+
+Static members (variables, methods, constructors)
+
+Example: Build a simple BankAccount class with balance deposit/withdraw.
+
+📅 Day 2 – Inheritance & Polymorphism (Runtime + Compile time)
+
+Inheritance (: base)
+
+Method Overloading (Compile-time Polymorphism)
+
+Method Overriding (Runtime Polymorphism, virtual, override)
+
+base keyword usage
+
+sealed classes & methods
+
+Abstract classes & abstract methods
+
+Example: Shape → Circle, Rectangle (Area/Perimeter)
+
+📅 Day 3 – Interfaces & Advanced OOP
+
+What is an Interface? Why use it?
+
+Interface vs Abstract Class
+
+Multiple Inheritance via Interfaces
+
+Default interface methods (C# 8+)
+
+IS-A vs HAS-A relationship (Composition vs Inheritance)
+
+Example: IVehicle, ICar implementation
+
+📅 Day 4 – Encapsulation, Properties & Special OOP Features
+
+Encapsulation (getters/setters, auto-properties)
+
+Read-only & Write-only properties
+
+Indexers
+
+Delegates (basic intro as OOP feature)
+
+Events (publisher-subscriber)
+
+Operator Overloading (+, ==, etc.)
+
+Example: Employee class with encapsulated salary, event for salary update.
+
+📅 Day 5 – Advanced OOP + Real-world Project
+
+Exception Handling in OOP
+
+Partial Classes
+
+Nested Classes
+
+Static vs Instance members deep dive
+
+Object Class (ToString, Equals, GetHashCode, etc.)
+
+Generics (basic OOP usage)
+
+SOLID principles overview (in short)
+
+Mini Project combining all concepts → e.g., Library Management System / Student Management System📅 Day 1 – OOP Foundations
+
+What is OOP? Why OOP in C#?
+
+Class & Object
+
+Fields, Properties, Methods
+
+Constructors (Default, Parameterized, Copy Constructor)
+
+this keyword
+
+Access Modifiers (public, private, protected, internal, protected internal)
+
+Static members (variables, methods, constructors)
+
+Example: Build a simple BankAccount class with balance deposit/withdraw.
+
+📅 Day 2 – Inheritance & Polymorphism (Runtime + Compile time)
+
+Inheritance (: base)
+
+Method Overloading (Compile-time Polymorphism)
+
+Method Overriding (Runtime Polymorphism, virtual, override)
+
+base keyword usage
+
+sealed classes & methods
+
+Abstract classes & abstract methods
+
+Example: Shape → Circle, Rectangle (Area/Perimeter)
+
+📅 Day 3 – Interfaces & Advanced OOP
+
+What is an Interface? Why use it?
+
+Interface vs Abstract Class
+
+Multiple Inheritance via Interfaces
+
+Default interface methods (C# 8+)
+
+IS-A vs HAS-A relationship (Composition vs Inheritance)
+
+Example: IVehicle, ICar implementation
+
+📅 Day 4 – Encapsulation, Properties & Special OOP Features
+
+Encapsulation (getters/setters, auto-properties)
+
+Read-only & Write-only properties
+
+Indexers
+
+Delegates (basic intro as OOP feature)
+
+Events (publisher-subscriber)
+
+Operator Overloading (+, ==, etc.)
+
+Example: Employee class with encapsulated salary, event for salary update.
+
+📅 Day 5 – Advanced OOP + Real-world Project
+
+Exception Handling in OOP
+
+Partial Classes
+
+Nested Classes
+
+Static vs Instance members deep dive
+
+Object Class (ToString, Equals, GetHashCode, etc.)
+
+Generics (basic OOP usage)
+
+SOLID principles overview (in short)
+
+Mini Project combining all concepts → e.g., Library Management System / Student Management System
