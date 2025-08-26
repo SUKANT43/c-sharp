@@ -15,13 +15,5 @@ namespace University_Management_System
         public string Department { get; set; }
         public int Attendance { get; set; }
 
-        public delegate void CheckStudentCriteria(Student st);
-        public event CheckStudentCriteria AttendanceCriteria;
-        public event CheckStudentCriteria ResultCriteria;
-        public void AttendanceAlert()
-        {
-            AttendanceCriteria?.Invoke(this);
-            ResultCriteria?.Invoke(this);
-        }
     }
 }

@@ -8,9 +8,9 @@ namespace University_Management_System
 {
     class Course
     {
-        string Id { get; set; }
-        string CourseName { get; set; }
-        int Credits { get; set; }
-        int FacultyId { get; set; }
+       public string Id { get; set; }
+       public string CourseName { get; set; }
+       public int Credits { get; set; }
+       public int FacultyId { get; set; }
     }
 }
