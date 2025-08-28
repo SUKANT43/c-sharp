@@ -8,5 +8,9 @@ namespace BankManagement.Model
 {
     class BankSchema
     {
+       public string Name { get; set; }
+       public  string Account_Number { get; set; }
+       public int Balance { get; set; }
+
     }
 }

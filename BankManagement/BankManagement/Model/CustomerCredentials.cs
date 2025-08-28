@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankManagement.Model
 {
-    class Customer
+    class CustomerCredentials
     {
        public string Account_number { get; set; }
        public string UserName { get; set; }
