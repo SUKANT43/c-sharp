@@ -59,7 +59,6 @@ class Program
         {
             Console.WriteLine($"CourseId: {sc.CourseId}, CourseCount: {sc.CourseCount}");
         }
-        Console.ReadLine();
 
         var averageMarks = students.GroupBy(s => s.CourseId)
             .Select(k => new {
@@ -70,5 +69,39 @@ class Program
         {
             Console.WriteLine($"Course id: {st.CourseId}, Average Marks: {st.avg}");
         }
+
+        var HighScore = students.GroupBy(s=>s.CourseId)
+            .Select(r=>new
+            {
+                CourseId=r.Key,
+                Topper=r.OrderByDescending(s=>s.Marks).First()
+            });
+
+        foreach(var sc in HighScore)
+        {
+            Console.WriteLine($"Course: {sc.CourseId}, Topper: {sc.Topper}");
+        }
+
+        var groupNameByCourse = students.GroupBy(s => s.CourseId)
+            .Select(r => new
+            {
+                CourseId = r.Key,
+                Names = r.Select(s => s.Name).ToList()
+            });
+
+        foreach(var gn in groupNameByCourse)
+        {
+            Console.WriteLine($"CourseId:{gn.CourseId}");
+            Console.Write("Name List");
+            foreach(var n in gn.Names)
+            {
+                Console.WriteLine(n);
+            }
+        }
+
+
+
+        Console.ReadLine();
+
     }
 }
