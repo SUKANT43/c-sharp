@@ -29,14 +29,53 @@ namespace BankManagement.Service
             new Model.BankSchema { Name = "Olivia K", Account_Number = "ACC1017", Balance = 2890 },
             new Model.BankSchema { Name = "Paul W", Account_Number = "ACC1018", Balance = 750 },
             new Model.BankSchema { Name = "Quinn S", Account_Number = "ACC1019", Balance = 4150 },
-            new Model.BankSchema { Name = "Rachel G", Account_Number = "ACC1020", Balance = 9850 }
+            new Model.BankSchema { Name = "Rachel G", Account_Number = "ACC1020", Balance = 9850 },
+            new Model.BankSchema { Name = "sukant", Account_Number = "ec326", Balance = 1000000 }
+
         };
 
-        public static bool CheckBalance(bool credential,string Account_Number)
+        public static void  CheckBalance(bool credential,string Account_Number)
         {
+            if (!credential)
+            {
+                return ;
+            }
             var FindUser = BankSchemaList.Where(acc=>acc.Account_Number==Account_Number).First();
             Console.WriteLine($"Name: {FindUser.Name}, Account Number: {FindUser.Account_Number}, Balance:{FindUser.Balance}");
-            return true;
+        }
+        public static void Credit(bool credentials,string name, string AccNum, string toAccNum, int Amount)
+        {
+            if (!credentials)
+            {
+                return;
+            }
+            Console.WriteLine("Enter Password to Transaction");
+            string pass = Console.ReadLine();
+
+            bool TwoStepAuth = Service.CustomerCredentialService.TwoStepAuth(AccNum,name,pass);
+            if (!TwoStepAuth)
+            {
+                Console.WriteLine("Wrong Password! Try Again.");
+                return;
+            }
+            foreach (var ls in BankSchemaList)
+            {
+                if (ls.Account_Number == AccNum)
+                {
+                    if (ls.Balance < Amount)
+                    {
+                        Console.WriteLine("Insufficient Balance");
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Sending...");
+                        ls.Balance = ls.Balance - Amount;
+                        Service.TransactionHistoryService.AddTransaction(credentials,AccNum,toAccNum,Amount);
+                        Console.WriteLine("Transaction Successfull");
+                    }
+                }
+            }
         }
     }
 }

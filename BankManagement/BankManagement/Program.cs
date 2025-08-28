@@ -23,7 +23,8 @@ namespace BankManagement
             bool user = false;
             bool admin = false;
             bool credential = false;
-            string  name, pass="";
+            string name = null;
+            string pass =null;
             string accNum = null;
             if (navigate == 1)
             {
@@ -92,6 +93,15 @@ namespace BankManagement
                         else if(credential && choice == 2 && user)
                         {
                             Service.TransactionHistoryService.TransactionHistory(credential, accNum);
+                        }
+                        else if(credential && choice==3 && user)
+                        {   
+                            Console.WriteLine("Enter the Account Number of reciver: ");
+                            string toAcc = Console.ReadLine();
+                            Console.WriteLine("Enter the Amount: ");
+                            int amount = int.Parse(Console.ReadLine());
+                            Service.BankSchemaService.Credit(credential,name, accNum, toAcc, amount);
+
                         }
                         else if (choice > 3 || choice < 1)
                         {

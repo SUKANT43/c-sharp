@@ -29,7 +29,9 @@ namespace BankManagement.Service
             new BankManagement.Model.CustomerCredentials { Account_number = "ACC1017", UserName = "Olivia K", Password = "pass1017" },
             new BankManagement.Model.CustomerCredentials { Account_number = "ACC1018", UserName = "Paul W", Password = "pass1018" },
             new BankManagement.Model.CustomerCredentials { Account_number = "ACC1019", UserName = "Quinn S", Password = "pass1019" },
-            new BankManagement.Model.CustomerCredentials { Account_number = "ACC1020", UserName = "Rachel G", Password = "pass1020" }
+            new BankManagement.Model.CustomerCredentials { Account_number = "ACC1020", UserName = "Rachel G", Password = "pass1020" },
+            new BankManagement.Model.CustomerCredentials { Account_number = "ec326", UserName = "sukant", Password = "1234" }
+
         };
         public static bool GiveCredentials(string acc_num,string userName, string Password)
         {
@@ -47,5 +49,19 @@ namespace BankManagement.Service
             Console.WriteLine($"Login Failed or Invalid details Try Again.");
             return false;
         }
+
+        public static bool TwoStepAuth(string acc_num, string userName, string Password)
+        {
+            var FindUser = CustomerCredentialList.Where(acc => acc.Account_number == acc_num).FirstOrDefault();
+            if (FindUser.UserName == userName && FindUser.Password == Password)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
+
     }
 }

@@ -9,7 +9,7 @@ namespace BankManagement.Model
     class TransactionHistory
     {
        public string Account_Number { get; set; }
-       public int ToAccount { get; set; }
+       public string ToAccount { get; set; }
        public int TransactionAmount { get; set; }
     }
 }
