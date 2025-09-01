@@ -17,7 +17,6 @@ namespace BankManagement
             Console.WriteLine("Click any key for exit");
         }
 
-
         static void Main(string[] args)
         {
             int navigate = 1;
