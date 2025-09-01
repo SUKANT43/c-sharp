@@ -103,14 +103,14 @@ namespace BankManagement
                             string toAcc = Console.ReadLine();
                             Console.WriteLine("Enter the Amount: ");
                             int amount = int.Parse(Console.ReadLine());
-                            Service.BankSchemaService.Credit(credential, name, accNum, toAcc, amount);
+                            Service.BankSchemaService.Debit(credential, name, accNum, toAcc, amount);
 
                         }
                         else if (credential && choice==4 && user)
                         {
-
+                            Service.BankSchemaService.Credit(credential,accNum);
                         }
-                        else if (choice > 3 || choice < 1)
+                        else if (choice > 4 || choice < 1)
                         {
                             credential = false;
                             user = false;

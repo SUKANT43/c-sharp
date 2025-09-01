@@ -43,7 +43,7 @@ namespace BankManagement.Service
             var FindUser = BankSchemaList.Where(acc => acc.Account_Number == Account_Number).First();
             Console.WriteLine($"Name: {FindUser.Name}, Account Number: {FindUser.Account_Number}, Balance:{FindUser.Balance}");
         }
-        public static void Credit(bool credentials, string name, string AccNum, string toAccNum, int Amount)
+        public static void Debit(bool credentials, string name, string AccNum, string toAccNum, int Amount)
         {
             if (!credentials)
             {
@@ -108,6 +108,29 @@ namespace BankManagement.Service
             }
 
         }
+
+
+        public static void Credit(bool Credential, string AccNum)
+        {
+            if (!Credential)
+            {
+                Console.WriteLine("Invalid Credential. Try again.");
+                return; 
+            }
+
+            Console.WriteLine("Enter the Amount to deposit: ");
+            int amt = int.Parse(Console.ReadLine());
+            foreach(var ls in BankSchemaList)
+            {
+                if (ls.Account_Number == AccNum)
+                {
+                    ls.Balance += amt;
+                    Console.WriteLine($"{ls.Name} your amount has been deposited.");
+                    return;
+                }
+            }
+        }
+
     }
  }
 
