@@ -33,7 +33,7 @@ namespace BankManagement.Service
             new BankManagement.Model.CustomerCredentials { Account_number = "ec326", UserName = "sukant", Password = "1234" }
 
         };
-        public static bool GiveCredentials(string acc_num,string userName, string Password)
+        public static bool GiveCredentials(string acc_num, string userName, string Password)
         {
             var FindUser = CustomerCredentialList.Where(acc => acc.Account_number == acc_num).FirstOrDefault();
             if (FindUser == null)
@@ -41,7 +41,7 @@ namespace BankManagement.Service
                 Console.WriteLine($"Login Failed or Invalid details Try Again.");
                 return false;
             }
-            if (FindUser.UserName==userName && FindUser.Password == Password)
+            if (FindUser.UserName == userName && FindUser.Password == Password)
             {
                 Console.WriteLine($"Successfully Logined {FindUser.UserName}.");
                 return true;
@@ -60,8 +60,12 @@ namespace BankManagement.Service
             return false;
         }
 
-
-
-
+        public static void CreateAuthForNewUser(string AccNum, string name, string pass)
+        {
+            CustomerCredentialList.Add(new Model.CustomerCredentials { Account_number = AccNum, UserName = name, Password = pass });
+            Console.WriteLine($"Congrats {name}! Your Account Number: {AccNum}, and Password:{pass}. Note: Remember you account number, name and password");
+        }
     }
 }
+    
+

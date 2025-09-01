@@ -34,16 +34,16 @@ namespace BankManagement.Service
 
         };
 
-        public static void  CheckBalance(bool credential,string Account_Number)
+        public static void CheckBalance(bool credential, string Account_Number)
         {
             if (!credential)
             {
-                return ;
+                return;
             }
-            var FindUser = BankSchemaList.Where(acc=>acc.Account_Number==Account_Number).First();
+            var FindUser = BankSchemaList.Where(acc => acc.Account_Number == Account_Number).First();
             Console.WriteLine($"Name: {FindUser.Name}, Account Number: {FindUser.Account_Number}, Balance:{FindUser.Balance}");
         }
-        public static void Credit(bool credentials,string name, string AccNum, string toAccNum, int Amount)
+        public static void Credit(bool credentials, string name, string AccNum, string toAccNum, int Amount)
         {
             if (!credentials)
             {
@@ -52,7 +52,7 @@ namespace BankManagement.Service
             Console.WriteLine("Enter Password to Transaction");
             string pass = Console.ReadLine();
 
-            bool TwoStepAuth = Service.CustomerCredentialService.TwoStepAuth(AccNum,name,pass);
+            bool TwoStepAuth = Service.CustomerCredentialService.TwoStepAuth(AccNum, name, pass);
             if (!TwoStepAuth)
             {
                 Console.WriteLine("Wrong Password! Try Again.");
@@ -71,11 +71,43 @@ namespace BankManagement.Service
                     {
                         Console.WriteLine($"Sending...");
                         ls.Balance = ls.Balance - Amount;
-                        Service.TransactionHistoryService.AddTransaction(credentials,AccNum,toAccNum,Amount);
+                        Service.TransactionHistoryService.AddTransaction(credentials, AccNum, toAccNum, Amount);
                         Console.WriteLine("Transaction Successfull");
                     }
                 }
             }
         }
+
+        private static int num = 310;
+
+        public static void CreateAccount()
+        {
+            Console.WriteLine("Enter Your Name:");
+            string name = Console.ReadLine();
+            string AccNum = "acc" + (BankSchemaService.num++);
+            Console.WriteLine($"{name} your account number is{AccNum}. Please create password for finsih the process");
+
+            bool isPassCreated = true;
+            while (isPassCreated)
+            {
+                Console.WriteLine("Create your password:");
+                string pass = Console.ReadLine();
+                Console.WriteLine("Enter Confirm password:");
+                string ConfirmPass = Console.ReadLine();
+                if (pass == ConfirmPass)
+                {
+                    Service.CustomerCredentialService.CreateAuthForNewUser(AccNum,name,pass);
+                    BankSchemaList.Add(new Model.BankSchema { Name = name, Account_Number = AccNum, Balance = 0 });
+                    isPassCreated = false;
+                }
+                else
+                {
+                    Console.WriteLine("Your Passwords are not matching. Try Again.");
+                }
+
+            }
+
+        }
     }
-}
+ }
+

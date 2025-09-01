@@ -109,7 +109,7 @@ namespace BankManagement.Service
                     Amount=v.TransactionAmount
                 });
 
-            if (userTransactions == null)
+            if (userTransactions.Count()==0)
             {
                 Console.WriteLine("This account not yet started transaction");
             }

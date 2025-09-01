@@ -13,15 +13,18 @@ namespace BankManagement
             Console.WriteLine("Click 1 for Check Balance");
             Console.WriteLine("Click 2 for View Transaction History");
             Console.WriteLine("Click 3 for Amount Transaction");
+            Console.WriteLine("Click 4 for Deposit Amount");
             Console.WriteLine("Click any key for exit");
         }
+
+
         static void Main(string[] args)
         {
             int navigate = 1;
-            Console.WriteLine("Enter 1 for User and 2 for Admin");
+            Console.WriteLine("Enter 1 for User and 2 for Create Account");
             navigate = int.Parse(Console.ReadLine());
             bool user = false;
-            bool admin = false;
+            bool CreateAccount = false;
             bool credential = false;
             string name = null;
             string pass =null;
@@ -32,7 +35,7 @@ namespace BankManagement
             }
             else if (navigate == 2)
             {
-                admin = true;
+                CreateAccount = true;
             }
 
             if (navigate == 1||navigate==2)
@@ -88,19 +91,23 @@ namespace BankManagement
                         }
                         if (credential && choice == 1 && user)
                         {
-                            Service.BankSchemaService.CheckBalance(credential,accNum);
+                            Service.BankSchemaService.CheckBalance(credential, accNum);
                         }
-                        else if(credential && choice == 2 && user)
+                        else if (credential && choice == 2 && user)
                         {
                             Service.TransactionHistoryService.TransactionHistory(credential, accNum);
                         }
-                        else if(credential && choice==3 && user)
-                        {   
+                        else if (credential && choice == 3 && user)
+                        {
                             Console.WriteLine("Enter the Account Number of reciver: ");
                             string toAcc = Console.ReadLine();
                             Console.WriteLine("Enter the Amount: ");
                             int amount = int.Parse(Console.ReadLine());
-                            Service.BankSchemaService.Credit(credential,name, accNum, toAcc, amount);
+                            Service.BankSchemaService.Credit(credential, name, accNum, toAcc, amount);
+
+                        }
+                        else if (credential && choice==4 && user)
+                        {
 
                         }
                         else if (choice > 3 || choice < 1)
@@ -110,9 +117,16 @@ namespace BankManagement
                         }
                     }
                 }
-                while (admin)
+                if (CreateAccount)
                 {
-
+                    Service.BankSchemaService.CreateAccount();
+                    Console.WriteLine("For Continue press 1 and for exit press any key");
+                    string cont = Console.ReadLine();
+                    if (cont == "1")
+                    {
+                        string[] arr = new string[10];
+                        Program.Main(arr);
+                    }
                 }
             }
             else{
