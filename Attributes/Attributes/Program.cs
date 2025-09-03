@@ -11,7 +11,8 @@ namespace Attributes
         public static void Main(String[] args)
         {
             Console.WriteLine(Calculator.Add(10, 20));
-            Console.WriteLine(Calculator.Add(new List<int> { 10,20,30}));
+            Console.WriteLine(Calculator.Add(new List<int>() { 10,20,30}));
+            Project.DoWork();
             Console.ReadLine();
         }
     }
