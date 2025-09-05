@@ -56,6 +56,19 @@ class PrintedBook : Book
     {
         Console.WriteLine($"[Printed Book] {Title} by {Author} ({Year})");
     }
-    
-    
 }
+
+class Ebook : Book
+{
+    public double FileSizeMb { get; set; }
+
+    public Ebook(string title, string author, int year, double size) : base(title, author, year)
+    {
+        FileSizeMb = size;
+    }
+    public override void Display()
+    {
+        Console.WriteLine($"[E-Book] {Title} by {Author} ({Year}) - {FileSizeMB}MB");
+    }
+}
+
