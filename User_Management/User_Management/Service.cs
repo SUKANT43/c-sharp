@@ -5,6 +5,7 @@ namespace User_Management
 {
     class Service
     {
+        //add user
         public static void AddUser(string name, string email, int age)
         {
             using (MySqlConnection conn = new MySqlConnection(Config.connString))
@@ -20,6 +21,26 @@ namespace User_Management
 
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("✅ User added successfully!");
+                }
+            }
+        }
+
+        //get user
+        public static void GetUserData()
+        {
+            using(MySqlConnection conn=new MySqlConnection(Config.connString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM users";
+                using(MySqlCommand cmd=new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine($"ID: {reader["id"]}, Name: {reader["name"]}, Email: {reader["email"]}, Age: {reader["age"]}");
+                        }
+                    }
                 }
             }
         }
