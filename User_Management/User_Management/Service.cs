@@ -1,0 +1,44 @@
+﻿using System;
+using MySql.Data.MySqlClient;
+
+namespace User_Management
+{
+    class Service
+    {
+        public static void AddUser(string name, string email, int age)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Config.connString))
+            {
+                conn.Open();
+
+                string query = "INSERT INTO users(name, email, age) VALUES (@name, @email, @age)";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@age", age);
+
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("✅ User added successfully!");
+                }
+            }
+        }
+
+        //delete User
+        public static void DeleteUser(int id)
+        {
+            using(MySqlConnection conn=new MySqlConnection(Config.connString))
+            {
+                conn.Open();
+                string query = "DELETE FROM users WHERE id=@id";
+                using(MySqlCommand cmd=new MySqlCommand(query,conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("User data deleted successfully!");
+                }
+            }
+        }
+
+    }
+}

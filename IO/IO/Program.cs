@@ -1,9 +1,4 @@
-﻿using System;
-using System.IO;
-
-
-using System;
-using System.IO;
+﻿
 
 //wtrite
 /*class Program
@@ -58,6 +53,9 @@ class Program
         Console.WriteLine("New line appended!");
     }
 }*/
+
+
+
 
 
 
