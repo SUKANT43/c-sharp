@@ -45,6 +45,25 @@ namespace User_Management
             }
         }
 
+        //update user
+        public static void UpdateUser(int id, string newName,string email, int newAge)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Config.connString))
+            {
+                conn.Open();
+                string query = "UPDATE users SET name=@name, age=@age, email=@email WHERE id=@id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@name", newName);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@age", newAge);
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("Your data updated successfully");
+                }
+            }
+        }
+
         //delete User
         public static void DeleteUser(int id)
         {
