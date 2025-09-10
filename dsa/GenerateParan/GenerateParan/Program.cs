@@ -10,7 +10,6 @@ namespace GenerateParan
     {
         public static void Generate(int n, List<string>list,string ans,int open,int close)
         {
-            Console.WriteLine(ans);
 
             if (ans.Length == n * 2)
             {
