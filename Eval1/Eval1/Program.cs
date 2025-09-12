@@ -118,7 +118,8 @@ namespace Eval1
                 string op = Console.ReadLine();
                 if (op == "1")
                 {
-                    var info = data.Where(d => d.color=="Area").OrderBy(d=>d.val);
+                    var info = data.Where(d => d.color == "Area").OrderBy(d => d.val);
+
                     foreach (var d in info)
                     {
                         Console.WriteLine($"Shape Name: {d.shapeName}, Color: {d.color}, Values: {d.val}");
@@ -126,7 +127,6 @@ namespace Eval1
                 }
                 else
                 {
-                    Console.WriteLine("hi");
                     var info = data.Where(d => d.color=="Perimter").OrderBy(d => d.val);
                     foreach (var d in info)
                     {

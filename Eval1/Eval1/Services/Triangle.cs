@@ -8,7 +8,7 @@ namespace Eval1.Models
 {
     class Triangle : Shapes
     {
-        public double sideA;
+         public double sideA;
         public double sideB;
         public double sideC;
         public void DataVal(double s1, double s2, double s3)
