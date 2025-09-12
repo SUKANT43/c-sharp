@@ -17,15 +17,11 @@ namespace FloodFill
 
         public static void BFS(int[][]arr,int targetValue,int row,int col,int num)
         {
-            for ( int i = row; i < arr.Length; i++)
-            {
-                for(int j = col; j < arr.Length; j++)
-                {
 
-                    if ((i >= 0 && j >= 0 && i < arr.Length && j < arr[i].Length) && (arr[i][j] == targetValue))
+                    if ((row >= 0 && col >= 0 && row < arr.Length && col < arr[row].Length) && (arr[row][col] == targetValue))
                     {
 
-                        arr[i][j] = num;
+                        arr[row][col] = num;
                     }
                     else
                     {
@@ -44,8 +40,8 @@ namespace FloodFill
                     BFS(arr, targetValue, row + 1, col-1, num);
                     BFS(arr, targetValue, row -1, col+1, num);
 
-                }
-            }
+                
+            
         }
         
         static void Main(string[] args)
