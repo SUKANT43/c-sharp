@@ -38,6 +38,12 @@ namespace FloodFill
 
                     BFS(arr,targetValue,row-1,col,num);
                     BFS(arr, targetValue, row + 1, col, num);
+
+                    BFS(arr, targetValue, row + 1, col+1, num);
+                    BFS(arr, targetValue, row -1, col-1, num);
+                    BFS(arr, targetValue, row + 1, col-1, num);
+                    BFS(arr, targetValue, row -1, col+1, num);
+
                 }
             }
         }
@@ -46,13 +52,13 @@ namespace FloodFill
         {
             int[][] arr1 =
             {
-                new int[]{2,2,2,2},
-                new int[]{2,0,2,0},
-                new int[]{0,0,0,0},
-                new int[]{0,2,0,0},
-
+                new int[]{0,0,1,2},
+                new int[]{0,1,0,1},
+                new int[]{1,0,1,0},
+                new int[]{0,1,0,1},
+                new int[]{1,0,1,2}
             };
-            int row = 1;
+            int row = 0;
             int col = 2;
             int num = 3;
 
