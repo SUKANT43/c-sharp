@@ -21,7 +21,7 @@ namespace Eval1.Models
             
             Program.data.Add(new Rectangle
             {
-                shapeName = "Rectamgle",
+                shapeName = "Rectangle",
                 color = "Area",
                 val = area
             });

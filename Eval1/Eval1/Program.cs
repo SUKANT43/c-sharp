@@ -32,11 +32,11 @@ namespace Eval1
                          a= double.Parse(Console.ReadLine());
                         if (a < 0)
                         {
-                            throw new Exception("Dont enter negative value.");
+                            throw new InputException("Dont enter negative value.");
                         }
 
                     }
-                    catch(Exception e)
+                    catch(InputException e)
                     {
                         throw new InputException("Enter only Double. "+e);
                     }
@@ -127,7 +127,7 @@ namespace Eval1
                 }
                 else
                 {
-                    var info = data.Where(d => d.color=="Perimter").OrderBy(d => d.val);
+                    var info = data.Where(d => d.color== "Perimeter").OrderBy(d => d.val);
                     foreach (var d in info)
                     {
                         Console.WriteLine($"Shape Name: {d.shapeName}, Color: {d.color}, Values: {d.val}");
