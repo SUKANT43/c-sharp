@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E6B5928-5AA4-4F61-9338-AF0F9A8DE1C2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>ShapeManagerApp</RootNamespace>
-    <AssemblyName>ShapeManagerApp</AssemblyName>
+    <ProjectGuid>{E467DA2D-8D34-4EC6-8D30-7E4F76F2F34B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EventsAndDelegates</RootNamespace>
+    <AssemblyName>EventsAndDelegates</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
